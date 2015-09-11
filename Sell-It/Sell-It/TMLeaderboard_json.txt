@@ -1,0 +1,39 @@
+{
+  "TM": [
+    {
+      "Name": "Alpha",
+      "id": "1",
+      "loc": "JP nagar",
+      "lat": "12.904549",
+      "long": "77.582952"
+    },
+    {
+      "Name": "Beta",
+      "id": "2",
+      "loc": "BTM Layout",
+      "lat": "12.919023",
+      "long": "77.608642"
+    },
+    {
+      "Name": "Gamma",
+      "id": "3",
+      "loc": "Koramangala",
+      "lat": "12.931457",
+      "long": "77.623996"
+    },
+    {
+      "Name": "Delta",
+      "id": "4",
+      "loc": "Bilekahalli",
+      "lat": "12.895986",
+      "long": "77.606302"
+    },
+    {
+      "Name": "Epsilon",
+      "id": "5",
+      "loc": "Jayanagar",
+      "lat": "12.924214",
+      "long": "77.587756"
+    }
+  ]
+}

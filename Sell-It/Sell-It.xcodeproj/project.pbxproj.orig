@@ -25,11 +25,14 @@
 		222D29FB1BA2F16200D59CB1 /* SMConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D29FA1BA2F16200D59CB1 /* SMConfigurationViewController.m */; };
 		222D29FE1BA2F19000D59CB1 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D29FD1BA2F19000D59CB1 /* FilterViewController.m */; };
 		222D2A011BA2FF8D00D59CB1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D2A001BA2FF8D00D59CB1 /* LoginViewController.m */; };
+<<<<<<< HEAD
 		792DB71E1BA3715D00A7E79E /* TM1.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DB71D1BA3715D00A7E79E /* TM1.png */; };
 		792DB7201BA3733A00A7E79E /* TM2.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DB71F1BA3733A00A7E79E /* TM2.png */; };
 		792DB7221BA3738800A7E79E /* TM3.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DB7211BA3738800A7E79E /* TM3.png */; };
+=======
 		222D2A501BA33F6300D59CB1 /* libPods-Sell-It-AFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 222D2A4E1BA33F6300D59CB1 /* libPods-Sell-It-AFNetworking.a */; };
 		222D2A511BA33F6300D59CB1 /* libPods-Sell-It-SDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 222D2A4F1BA33F6300D59CB1 /* libPods-Sell-It-SDWebImage.a */; };
+>>>>>>> 9939de7253c864a521807c9155d1634209891082
 		F186BEEC88F269DB50733483 /* libPods-Sell-It.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1086BD91FADB077A126CDBC6 /* libPods-Sell-It.a */; };
 /* End PBXBuildFile section */
 
@@ -308,8 +311,11 @@
 				222D29D81BA2ED0E00D59CB1 /* LaunchScreen.xib in Resources */,
 				792DB71E1BA3715D00A7E79E /* TM1.png in Resources */,
 				222D29D51BA2ED0E00D59CB1 /* Images.xcassets in Resources */,
+<<<<<<< HEAD
 				792DB7201BA3733A00A7E79E /* TM2.png in Resources */,
+=======
 				22204D831BA3454F000D43D6 /* TMLeaderboard_json.txt in Resources */,
+>>>>>>> 9939de7253c864a521807c9155d1634209891082
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

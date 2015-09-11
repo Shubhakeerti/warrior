@@ -110,6 +110,13 @@ NSString * const kClinicLon=@"longitude";
         }
 }
 
+//-(void)viewWillAppear:(BOOL)animated
+//{
+//    self.navigationController.navigationBarHidden = NO;
+//    self.navigationItem.leftBarButtonItem=nil;
+//    self.navigationItem.hidesBackButton=YES;
+//}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

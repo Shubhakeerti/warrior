@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong,nonatomic) UITabBarController* mainTabBarViewController;
++(AppDelegate*)sharedAppdelegate;
+@property (nonatomic,strong) NSArray *colorArray;
 
 @end
 
