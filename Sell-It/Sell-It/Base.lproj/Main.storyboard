@@ -3,7 +3,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--MapViewController-->
@@ -47,16 +46,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iha-CT-26n">
-                                                    <rect key="frame" x="18" y="13" width="57.5" height="57.5"/>
+                                                    <rect key="frame" x="10" y="5" width="73.5" height="73.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Iha-CT-26n" secondAttribute="height" multiplier="1:1" id="3rR-P1-RwZ"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Iha-CT-26n" secondAttribute="bottom" constant="5" id="IMR-d7-gYi"/>
-                                                <constraint firstItem="Iha-CT-26n" firstAttribute="leading" secondItem="vua-JN-Rse" secondAttribute="leadingMargin" constant="10" id="rL2-KT-2kg"/>
-                                                <constraint firstItem="Iha-CT-26n" firstAttribute="top" secondItem="vua-JN-Rse" secondAttribute="topMargin" constant="5" id="wEA-5M-x2s"/>
+                                                <constraint firstAttribute="bottom" secondItem="Iha-CT-26n" secondAttribute="bottom" constant="5" id="IMR-d7-gYi"/>
+                                                <constraint firstItem="Iha-CT-26n" firstAttribute="leading" secondItem="vua-JN-Rse" secondAttribute="leading" constant="10" id="rL2-KT-2kg"/>
+                                                <constraint firstItem="Iha-CT-26n" firstAttribute="top" secondItem="vua-JN-Rse" secondAttribute="top" constant="5" id="wEA-5M-x2s"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

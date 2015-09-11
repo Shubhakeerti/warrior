@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LeadBoardViewController : UIViewController
+@interface LeadBoardViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 
 @end
