@@ -1,0 +1,14 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '7.0'
+
+target 'Sell-It' do
+
+pod "AFNetworking", "~> 2.0"
+pod "SDWebImage", '~>3.7'
+
+end
+
+target 'Sell-ItTests' do
+
+end
+
