@@ -21,6 +21,7 @@
 		222D29F81BA2F14600D59CB1 /* SMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D29F71BA2F14600D59CB1 /* SMDetailViewController.m */; };
 		222D29FB1BA2F16200D59CB1 /* SMConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D29FA1BA2F16200D59CB1 /* SMConfigurationViewController.m */; };
 		222D29FE1BA2F19000D59CB1 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D29FD1BA2F19000D59CB1 /* FilterViewController.m */; };
+		222D2A011BA2FF8D00D59CB1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D2A001BA2FF8D00D59CB1 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		222D29FA1BA2F16200D59CB1 /* SMConfigurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMConfigurationViewController.m; sourceTree = "<group>"; };
 		222D29FC1BA2F19000D59CB1 /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterViewController.h; sourceTree = "<group>"; };
 		222D29FD1BA2F19000D59CB1 /* FilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterViewController.m; sourceTree = "<group>"; };
+		222D29FF1BA2FF8D00D59CB1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		222D2A001BA2FF8D00D59CB1 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 			children = (
 				222D29C81BA2ED0E00D59CB1 /* AppDelegate.h */,
 				222D29C91BA2ED0E00D59CB1 /* AppDelegate.m */,
+				222D29FF1BA2FF8D00D59CB1 /* LoginViewController.h */,
+				222D2A001BA2FF8D00D59CB1 /* LoginViewController.m */,
 				222D29CB1BA2ED0E00D59CB1 /* MapViewController.h */,
 				222D29CC1BA2ED0E00D59CB1 /* MapViewController.m */,
 				222D29CE1BA2ED0E00D59CB1 /* LeadBoardViewController.h */,
@@ -263,6 +268,7 @@
 				222D29CD1BA2ED0E00D59CB1 /* MapViewController.m in Sources */,
 				222D29F81BA2F14600D59CB1 /* SMDetailViewController.m in Sources */,
 				222D29EF1BA2F0D100D59CB1 /* DashBoardViewController.m in Sources */,
+				222D2A011BA2FF8D00D59CB1 /* LoginViewController.m in Sources */,
 				222D29C71BA2ED0E00D59CB1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
