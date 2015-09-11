@@ -29,9 +29,9 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)loginButtonActoin:(UIButton *)sender
+-(IBAction)loginButtonActoin:(UIButton *)sender
 {
-    
+    [self performSegueWithIdentifier:@"SHOW_TAB" sender:nil];
 }
 
 
