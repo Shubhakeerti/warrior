@@ -18,16 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LDs-hL-YCL">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDs-hL-YCL">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="thO-xp-ixN">
-                                <rect key="frame" x="0.0" y="431" width="320" height="0.0"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="thO-xp-ixN">
+                                <rect key="frame" x="0.0" y="300" width="320" height="131"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="131" id="7TC-nX-1jt"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="thO-xp-ixN" secondAttribute="trailing" id="1cW-Il-a7G"/>
+                            <constraint firstItem="thO-xp-ixN" firstAttribute="top" secondItem="LDs-hL-YCL" secondAttribute="bottom" id="3al-os-v7Y"/>
+                            <constraint firstItem="thO-xp-ixN" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="ReF-Wt-XFk"/>
+                            <constraint firstItem="LDs-hL-YCL" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="YQu-Fw-HpW"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="thO-xp-ixN" secondAttribute="bottom" id="gur-F4-Qq6"/>
+                            <constraint firstItem="LDs-hL-YCL" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="vIj-8i-7Es"/>
+                            <constraint firstAttribute="trailing" secondItem="LDs-hL-YCL" secondAttribute="trailing" id="xWn-9Y-Bjm"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
