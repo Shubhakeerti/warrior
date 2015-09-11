@@ -22,6 +22,9 @@
 		222D29FB1BA2F16200D59CB1 /* SMConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D29FA1BA2F16200D59CB1 /* SMConfigurationViewController.m */; };
 		222D29FE1BA2F19000D59CB1 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D29FD1BA2F19000D59CB1 /* FilterViewController.m */; };
 		222D2A011BA2FF8D00D59CB1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D2A001BA2FF8D00D59CB1 /* LoginViewController.m */; };
+		792DB71E1BA3715D00A7E79E /* TM1.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DB71D1BA3715D00A7E79E /* TM1.png */; };
+		792DB7201BA3733A00A7E79E /* TM2.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DB71F1BA3733A00A7E79E /* TM2.png */; };
+		792DB7221BA3738800A7E79E /* TM3.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DB7211BA3738800A7E79E /* TM3.png */; };
 		F186BEEC88F269DB50733483 /* libPods-Sell-It.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1086BD91FADB077A126CDBC6 /* libPods-Sell-It.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +70,9 @@
 		222D29FF1BA2FF8D00D59CB1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		222D2A001BA2FF8D00D59CB1 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		43678865BF297F181F2DFC4C /* Pods-Sell-It.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sell-It.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sell-It/Pods-Sell-It.debug.xcconfig"; sourceTree = "<group>"; };
+		792DB71D1BA3715D00A7E79E /* TM1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TM1.png; sourceTree = "<group>"; };
+		792DB71F1BA3733A00A7E79E /* TM2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TM2.png; sourceTree = "<group>"; };
+		792DB7211BA3738800A7E79E /* TM3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TM3.png; sourceTree = "<group>"; };
 		E2E57B97E4BF54DEA7F619D6 /* Pods-Sell-It.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sell-It.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sell-It/Pods-Sell-It.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +98,9 @@
 		222D29B81BA2ED0E00D59CB1 = {
 			isa = PBXGroup;
 			children = (
+				792DB7211BA3738800A7E79E /* TM3.png */,
+				792DB71F1BA3733A00A7E79E /* TM2.png */,
+				792DB71D1BA3715D00A7E79E /* TM1.png */,
 				222D29C31BA2ED0E00D59CB1 /* Sell-It */,
 				222D29E01BA2ED0E00D59CB1 /* Sell-ItTests */,
 				222D29C21BA2ED0E00D59CB1 /* Products */,
@@ -266,8 +275,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				222D29D31BA2ED0E00D59CB1 /* Main.storyboard in Resources */,
+				792DB7221BA3738800A7E79E /* TM3.png in Resources */,
 				222D29D81BA2ED0E00D59CB1 /* LaunchScreen.xib in Resources */,
+				792DB71E1BA3715D00A7E79E /* TM1.png in Resources */,
 				222D29D51BA2ED0E00D59CB1 /* Images.xcassets in Resources */,
+				792DB7201BA3733A00A7E79E /* TM2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

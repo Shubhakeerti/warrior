@@ -7,8 +7,28 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <GoogleMaps/GoogleMaps.h>
 @interface MapViewController : UIViewController
+{
+    GMSMapView *mapView_;
+    NSDictionary *dictMap;
+    CLGeocoder *geocoder;
+    CLPlacemark *placemark;
+    NSString *strCurrentLocation;
+    NSString *strCurrentCity;
+    CLLocationManager *locationManager;
+    GMSMarker *maker;
+    NSMutableArray *markers;
+    CLLocation *currentLocation;
+    BOOL isDrawn;
+    GMSPath *path;
+    
+    NSMutableArray *arrLocation;
+    NSMutableDictionary *dictLocation;
+}
+
+@property (weak, nonatomic) IBOutlet UIView *viewMap;
+@property (weak, nonatomic) IBOutlet UIView *viewTMView;
 
 
 @end
