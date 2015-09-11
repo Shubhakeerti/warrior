@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22204D811BA3406C000D43D6 /* TMCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22204D801BA3406C000D43D6 /* TMCell.m */; };
+		22204D831BA3454F000D43D6 /* TMLeaderboard_json.txt in Resources */ = {isa = PBXBuildFile; fileRef = 22204D821BA3454F000D43D6 /* TMLeaderboard_json.txt */; };
 		222D29C71BA2ED0E00D59CB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D29C61BA2ED0E00D59CB1 /* main.m */; };
 		222D29CA1BA2ED0E00D59CB1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D29C91BA2ED0E00D59CB1 /* AppDelegate.m */; };
 		222D29CD1BA2ED0E00D59CB1 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D29CC1BA2ED0E00D59CB1 /* MapViewController.m */; };
@@ -22,6 +24,8 @@
 		222D29FB1BA2F16200D59CB1 /* SMConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D29FA1BA2F16200D59CB1 /* SMConfigurationViewController.m */; };
 		222D29FE1BA2F19000D59CB1 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D29FD1BA2F19000D59CB1 /* FilterViewController.m */; };
 		222D2A011BA2FF8D00D59CB1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D2A001BA2FF8D00D59CB1 /* LoginViewController.m */; };
+		222D2A501BA33F6300D59CB1 /* libPods-Sell-It-AFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 222D2A4E1BA33F6300D59CB1 /* libPods-Sell-It-AFNetworking.a */; };
+		222D2A511BA33F6300D59CB1 /* libPods-Sell-It-SDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 222D2A4F1BA33F6300D59CB1 /* libPods-Sell-It-SDWebImage.a */; };
 		F186BEEC88F269DB50733483 /* libPods-Sell-It.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1086BD91FADB077A126CDBC6 /* libPods-Sell-It.a */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +41,9 @@
 
 /* Begin PBXFileReference section */
 		1086BD91FADB077A126CDBC6 /* libPods-Sell-It.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sell-It.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22204D7F1BA3406C000D43D6 /* TMCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMCell.h; sourceTree = "<group>"; };
+		22204D801BA3406C000D43D6 /* TMCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMCell.m; sourceTree = "<group>"; };
+		22204D821BA3454F000D43D6 /* TMLeaderboard_json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TMLeaderboard_json.txt; sourceTree = "<group>"; };
 		222D29C11BA2ED0E00D59CB1 /* Sell-It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sell-It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		222D29C51BA2ED0E00D59CB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		222D29C61BA2ED0E00D59CB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,6 +73,8 @@
 		222D29FD1BA2F19000D59CB1 /* FilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterViewController.m; sourceTree = "<group>"; };
 		222D29FF1BA2FF8D00D59CB1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		222D2A001BA2FF8D00D59CB1 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		222D2A4E1BA33F6300D59CB1 /* libPods-Sell-It-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Sell-It-AFNetworking.a"; path = "Pods/build/Debug-iphoneos/libPods-Sell-It-AFNetworking.a"; sourceTree = "<group>"; };
+		222D2A4F1BA33F6300D59CB1 /* libPods-Sell-It-SDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Sell-It-SDWebImage.a"; path = "Pods/build/Debug-iphoneos/libPods-Sell-It-SDWebImage.a"; sourceTree = "<group>"; };
 		43678865BF297F181F2DFC4C /* Pods-Sell-It.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sell-It.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sell-It/Pods-Sell-It.debug.xcconfig"; sourceTree = "<group>"; };
 		E2E57B97E4BF54DEA7F619D6 /* Pods-Sell-It.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sell-It.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sell-It/Pods-Sell-It.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				222D2A501BA33F6300D59CB1 /* libPods-Sell-It-AFNetworking.a in Frameworks */,
+				222D2A511BA33F6300D59CB1 /* libPods-Sell-It-SDWebImage.a in Frameworks */,
 				F186BEEC88F269DB50733483 /* libPods-Sell-It.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +100,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22204D7E1BA3403E000D43D6 /* LeaderBoard */ = {
+			isa = PBXGroup;
+			children = (
+				22204D821BA3454F000D43D6 /* TMLeaderboard_json.txt */,
+				222D29CE1BA2ED0E00D59CB1 /* LeadBoardViewController.h */,
+				222D29CF1BA2ED0E00D59CB1 /* LeadBoardViewController.m */,
+				22204D7F1BA3406C000D43D6 /* TMCell.h */,
+				22204D801BA3406C000D43D6 /* TMCell.m */,
+			);
+			name = LeaderBoard;
+			sourceTree = "<group>";
+		};
 		222D29B81BA2ED0E00D59CB1 = {
 			isa = PBXGroup;
 			children = (
@@ -113,13 +136,12 @@
 			isa = PBXGroup;
 			children = (
 				222D29C81BA2ED0E00D59CB1 /* AppDelegate.h */,
+				22204D7E1BA3403E000D43D6 /* LeaderBoard */,
 				222D29C91BA2ED0E00D59CB1 /* AppDelegate.m */,
 				222D29FF1BA2FF8D00D59CB1 /* LoginViewController.h */,
 				222D2A001BA2FF8D00D59CB1 /* LoginViewController.m */,
 				222D29CB1BA2ED0E00D59CB1 /* MapViewController.h */,
 				222D29CC1BA2ED0E00D59CB1 /* MapViewController.m */,
-				222D29CE1BA2ED0E00D59CB1 /* LeadBoardViewController.h */,
-				222D29CF1BA2ED0E00D59CB1 /* LeadBoardViewController.m */,
 				222D29ED1BA2F0D100D59CB1 /* DashBoardViewController.h */,
 				222D29EE1BA2F0D100D59CB1 /* DashBoardViewController.m */,
 				222D29F01BA2F12800D59CB1 /* DoctorDetailViewController.h */,
@@ -169,6 +191,8 @@
 		56E2754DF00D6F8EE06A8079 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				222D2A4E1BA33F6300D59CB1 /* libPods-Sell-It-AFNetworking.a */,
+				222D2A4F1BA33F6300D59CB1 /* libPods-Sell-It-SDWebImage.a */,
 				1086BD91FADB077A126CDBC6 /* libPods-Sell-It.a */,
 			);
 			name = Frameworks;
@@ -268,6 +292,7 @@
 				222D29D31BA2ED0E00D59CB1 /* Main.storyboard in Resources */,
 				222D29D81BA2ED0E00D59CB1 /* LaunchScreen.xib in Resources */,
 				222D29D51BA2ED0E00D59CB1 /* Images.xcassets in Resources */,
+				22204D831BA3454F000D43D6 /* TMLeaderboard_json.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +351,7 @@
 				222D29F51BA2F13800D59CB1 /* TMDetailViewController.m in Sources */,
 				222D29CD1BA2ED0E00D59CB1 /* MapViewController.m in Sources */,
 				222D29F81BA2F14600D59CB1 /* SMDetailViewController.m in Sources */,
+				22204D811BA3406C000D43D6 /* TMCell.m in Sources */,
 				222D29EF1BA2F0D100D59CB1 /* DashBoardViewController.m in Sources */,
 				222D2A011BA2FF8D00D59CB1 /* LoginViewController.m in Sources */,
 				222D29C71BA2ED0E00D59CB1 /* main.m in Sources */,
@@ -453,6 +479,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Sell-It/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -464,6 +494,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Sell-It/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
