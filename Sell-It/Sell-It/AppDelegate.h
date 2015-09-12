@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginViewController.h"
 
 
 typedef enum {
@@ -20,6 +21,7 @@ typedef enum {
 @property (strong,nonatomic) UITabBarController* mainTabBarViewController;
 +(AppDelegate*)sharedAppdelegate;
 @property (nonatomic,strong) NSArray *colorArray;
+@property (nonatomic,strong) LoginViewController *loginViewController;
 
 @end
 

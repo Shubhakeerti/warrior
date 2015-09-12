@@ -14,6 +14,7 @@
 #import "DataTableViewCell3.h"
 #import "DatePickerTableViewCell.h"
 #import "AppDelegate.h"
+#import "Utils.h"
 
 #define blueColor [UIColor colorWithRed:54.0/255.0 green:142.0/255.0 blue:244.0/255.0 alpha:1]
 @interface DashBoardViewController ()
@@ -87,6 +88,8 @@
             searchCell.designationLabel.text = @"sales Manager -bangalore";
             searchCell.emailLabel.text = @"danishjafri88@gmail.com";
             searchCell.phoneLabel.text = @"8105151960";
+            searchCell.imageViewManager.image = [Utils settingImageForContactsWithName:@"Danish" withKey:@"Danish"];
+            [Utils cropViewCircle:searchCell.imageViewManager];
             return searchCell;
             
         }
