@@ -34,7 +34,7 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self makeCircleWithColor:[UIColor redColor] andPercent:0.36 lineWidth:5 mainText:@"36%" subText:@"Revenue Generated" font:[UIFont systemFontOfSize:24] :[UIFont systemFontOfSize:10] onView:self.cView];
+    [self makeCircleWithColor:[UIColor redColor] andPercent:0.36 lineWidth:8 mainText:@"36%" subText:@"Revenue Generated" font:[UIFont systemFontOfSize:28] :[UIFont systemFontOfSize:10] onView:self.cView];
 }
 
 -(void)makeCircleWithColor:(UIColor*)color andPercent:(CGFloat)val lineWidth:(CGFloat)width mainText:(NSString*)mainText subText:(NSString*)subText font:(UIFont*)fontMain :(UIFont*)fontSub onView:(UIView*)view

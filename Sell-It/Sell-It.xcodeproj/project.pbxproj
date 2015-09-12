@@ -26,6 +26,13 @@
 		222D2A011BA2FF8D00D59CB1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D2A001BA2FF8D00D59CB1 /* LoginViewController.m */; };
 		222D2A501BA33F6300D59CB1 /* libPods-Sell-It-AFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 222D2A4E1BA33F6300D59CB1 /* libPods-Sell-It-AFNetworking.a */; };
 		222D2A511BA33F6300D59CB1 /* libPods-Sell-It-SDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 222D2A4F1BA33F6300D59CB1 /* libPods-Sell-It-SDWebImage.a */; };
+		59E23E1E1BA384E4001E8C07 /* NameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E23E1D1BA384E4001E8C07 /* NameTableViewCell.m */; };
+		59E23E241BA3850E001E8C07 /* DatePickerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E23E231BA3850E001E8C07 /* DatePickerTableViewCell.m */; };
+		59E23E271BA38519001E8C07 /* TabTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E23E261BA38519001E8C07 /* TabTableViewCell.m */; };
+		59E23E2A1BA3B209001E8C07 /* DataTableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E23E291BA3B209001E8C07 /* DataTableViewCell1.m */; };
+		59E23E2D1BA3B216001E8C07 /* DataTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E23E2C1BA3B216001E8C07 /* DataTableViewCell2.m */; };
+		59E23E301BA3B224001E8C07 /* DataTableViewCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E23E2F1BA3B224001E8C07 /* DataTableViewCell3.m */; };
+		59E23E331BA3E4CB001E8C07 /* DataTableViewCell4.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E23E321BA3E4CB001E8C07 /* DataTableViewCell4.m */; };
 		F186BEEC88F269DB50733483 /* libPods-Sell-It.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1086BD91FADB077A126CDBC6 /* libPods-Sell-It.a */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +83,20 @@
 		222D2A4E1BA33F6300D59CB1 /* libPods-Sell-It-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Sell-It-AFNetworking.a"; path = "Pods/build/Debug-iphoneos/libPods-Sell-It-AFNetworking.a"; sourceTree = "<group>"; };
 		222D2A4F1BA33F6300D59CB1 /* libPods-Sell-It-SDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Sell-It-SDWebImage.a"; path = "Pods/build/Debug-iphoneos/libPods-Sell-It-SDWebImage.a"; sourceTree = "<group>"; };
 		43678865BF297F181F2DFC4C /* Pods-Sell-It.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sell-It.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sell-It/Pods-Sell-It.debug.xcconfig"; sourceTree = "<group>"; };
+		59E23E1C1BA384E4001E8C07 /* NameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameTableViewCell.h; sourceTree = "<group>"; };
+		59E23E1D1BA384E4001E8C07 /* NameTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameTableViewCell.m; sourceTree = "<group>"; };
+		59E23E221BA3850E001E8C07 /* DatePickerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerTableViewCell.h; sourceTree = "<group>"; };
+		59E23E231BA3850E001E8C07 /* DatePickerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerTableViewCell.m; sourceTree = "<group>"; };
+		59E23E251BA38519001E8C07 /* TabTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabTableViewCell.h; sourceTree = "<group>"; };
+		59E23E261BA38519001E8C07 /* TabTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabTableViewCell.m; sourceTree = "<group>"; };
+		59E23E281BA3B209001E8C07 /* DataTableViewCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTableViewCell1.h; sourceTree = "<group>"; };
+		59E23E291BA3B209001E8C07 /* DataTableViewCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTableViewCell1.m; sourceTree = "<group>"; };
+		59E23E2B1BA3B216001E8C07 /* DataTableViewCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTableViewCell2.h; sourceTree = "<group>"; };
+		59E23E2C1BA3B216001E8C07 /* DataTableViewCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTableViewCell2.m; sourceTree = "<group>"; };
+		59E23E2E1BA3B224001E8C07 /* DataTableViewCell3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTableViewCell3.h; sourceTree = "<group>"; };
+		59E23E2F1BA3B224001E8C07 /* DataTableViewCell3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTableViewCell3.m; sourceTree = "<group>"; };
+		59E23E311BA3E4CB001E8C07 /* DataTableViewCell4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTableViewCell4.h; sourceTree = "<group>"; };
+		59E23E321BA3E4CB001E8C07 /* DataTableViewCell4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTableViewCell4.m; sourceTree = "<group>"; };
 		E2E57B97E4BF54DEA7F619D6 /* Pods-Sell-It.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sell-It.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sell-It/Pods-Sell-It.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,8 +156,8 @@
 		222D29C31BA2ED0E00D59CB1 /* Sell-It */ = {
 			isa = PBXGroup;
 			children = (
-				222D29C81BA2ED0E00D59CB1 /* AppDelegate.h */,
 				22204D7E1BA3403E000D43D6 /* LeaderBoard */,
+				222D29C81BA2ED0E00D59CB1 /* AppDelegate.h */,
 				222D29C91BA2ED0E00D59CB1 /* AppDelegate.m */,
 				222D29FF1BA2FF8D00D59CB1 /* LoginViewController.h */,
 				222D2A001BA2FF8D00D59CB1 /* LoginViewController.m */,
@@ -154,6 +175,7 @@
 				222D29FC1BA2F19000D59CB1 /* FilterViewController.h */,
 				222D29FD1BA2F19000D59CB1 /* FilterViewController.m */,
 				222D29FA1BA2F16200D59CB1 /* SMConfigurationViewController.m */,
+				59E23E1B1BA384CF001E8C07 /* tableCells */,
 				222D29D11BA2ED0E00D59CB1 /* Main.storyboard */,
 				222D29D41BA2ED0E00D59CB1 /* Images.xcassets */,
 				222D29D61BA2ED0E00D59CB1 /* LaunchScreen.xib */,
@@ -196,6 +218,27 @@
 				1086BD91FADB077A126CDBC6 /* libPods-Sell-It.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		59E23E1B1BA384CF001E8C07 /* tableCells */ = {
+			isa = PBXGroup;
+			children = (
+				59E23E1C1BA384E4001E8C07 /* NameTableViewCell.h */,
+				59E23E1D1BA384E4001E8C07 /* NameTableViewCell.m */,
+				59E23E221BA3850E001E8C07 /* DatePickerTableViewCell.h */,
+				59E23E231BA3850E001E8C07 /* DatePickerTableViewCell.m */,
+				59E23E251BA38519001E8C07 /* TabTableViewCell.h */,
+				59E23E261BA38519001E8C07 /* TabTableViewCell.m */,
+				59E23E281BA3B209001E8C07 /* DataTableViewCell1.h */,
+				59E23E291BA3B209001E8C07 /* DataTableViewCell1.m */,
+				59E23E2B1BA3B216001E8C07 /* DataTableViewCell2.h */,
+				59E23E2C1BA3B216001E8C07 /* DataTableViewCell2.m */,
+				59E23E2E1BA3B224001E8C07 /* DataTableViewCell3.h */,
+				59E23E2F1BA3B224001E8C07 /* DataTableViewCell3.m */,
+				59E23E311BA3E4CB001E8C07 /* DataTableViewCell4.h */,
+				59E23E321BA3E4CB001E8C07 /* DataTableViewCell4.m */,
+			);
+			name = tableCells;
 			sourceTree = "<group>";
 		};
 		DA91EA053C9FCC948B2E2260 /* Pods */ = {
@@ -346,14 +389,21 @@
 				222D29D01BA2ED0E00D59CB1 /* LeadBoardViewController.m in Sources */,
 				222D29FB1BA2F16200D59CB1 /* SMConfigurationViewController.m in Sources */,
 				222D29FE1BA2F19000D59CB1 /* FilterViewController.m in Sources */,
+				59E23E301BA3B224001E8C07 /* DataTableViewCell3.m in Sources */,
 				222D29CA1BA2ED0E00D59CB1 /* AppDelegate.m in Sources */,
 				222D29F21BA2F12800D59CB1 /* DoctorDetailViewController.m in Sources */,
+				59E23E2D1BA3B216001E8C07 /* DataTableViewCell2.m in Sources */,
 				222D29F51BA2F13800D59CB1 /* TMDetailViewController.m in Sources */,
 				222D29CD1BA2ED0E00D59CB1 /* MapViewController.m in Sources */,
+				59E23E271BA38519001E8C07 /* TabTableViewCell.m in Sources */,
 				222D29F81BA2F14600D59CB1 /* SMDetailViewController.m in Sources */,
+				59E23E1E1BA384E4001E8C07 /* NameTableViewCell.m in Sources */,
 				22204D811BA3406C000D43D6 /* TMCell.m in Sources */,
 				222D29EF1BA2F0D100D59CB1 /* DashBoardViewController.m in Sources */,
 				222D2A011BA2FF8D00D59CB1 /* LoginViewController.m in Sources */,
+				59E23E2A1BA3B209001E8C07 /* DataTableViewCell1.m in Sources */,
+				59E23E331BA3E4CB001E8C07 /* DataTableViewCell4.m in Sources */,
+				59E23E241BA3850E001E8C07 /* DatePickerTableViewCell.m in Sources */,
 				222D29C71BA2ED0E00D59CB1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

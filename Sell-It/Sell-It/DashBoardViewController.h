@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DashBoardViewController : UIViewController
+@interface DashBoardViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
