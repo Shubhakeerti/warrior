@@ -36,8 +36,16 @@ NSString * const kClinicLon=@"longitude";
     
     dictLocation=[[NSMutableDictionary alloc] initWithObjectsAndKeys:@"12.908590",kClinicLat,@"77.570217",kClinicLon, nil];
     
+    self.navigationController.navigationBarHidden = NO;
+    self.navigationItem.leftBarButtonItem=nil;
+    self.navigationItem.hidesBackButton=YES;
+    self.navigationController.topViewController.title = @"Ares";
+
     
-    [self loadMap:dictLocation];
+    [self.navigationItem setHidesBackButton:YES animated:YES];
+
+    
+    [self loadMap_TM:dictLocation];
 }
 
 -(void)setHitMap:(UIColor *)color
@@ -59,6 +67,88 @@ NSString * const kClinicLon=@"longitude";
     GMSCoordinateBounds *bounds = [[GMSCoordinateBounds alloc] initWithPath:path];
     [mapView_ animateWithCameraUpdate:[GMSCameraUpdate fitBounds:bounds withPadding:28.0f]];
 }
+
+
+-(void)loadMap_TM:(NSDictionary *)dictMapLocation
+{
+    @try
+    {
+        GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:[[dictMapLocation objectForKey:kClinicLat] floatValue]
+                                                                longitude:[[dictMapLocation objectForKey:kClinicLon] floatValue]
+                                                                     zoom:16];
+        mapView_ = [GMSMapView mapWithFrame:viewMap.bounds camera:camera];
+        mapView_.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+        mapView_.translatesAutoresizingMaskIntoConstraints = true;
+        GMSMarker* maker1=[[GMSMarker alloc] init];
+        maker1.position=CLLocationCoordinate2DMake([@"12.904549" floatValue], [@"77.582952" floatValue]);
+        maker1.title=[dictMapLocation objectForKey:kClinicLat];
+        maker1.snippet=[dictMapLocation objectForKey:kClinicLon];
+        maker1.icon=[UIImage imageNamed:@"red.png"];
+        maker1.map=mapView_;
+        [markers addObject:maker1];
+        
+        
+        GMSMarker* maker2=[[GMSMarker alloc] init];
+        maker2.position=CLLocationCoordinate2DMake([@"12.9118374" floatValue], [@"77.57949499999995" floatValue]);
+        maker2.title=@"TM 2";
+        maker2.snippet=@"Jp nagar 1st phase";
+        maker2.icon=[UIImage imageNamed:@"blue.png"];
+        maker2.map=mapView_;
+        [markers addObject:maker2];
+        
+        
+        GMSMarker* maker3=[[GMSMarker alloc] init];
+        maker3.position=CLLocationCoordinate2DMake([@"12.8940928" floatValue], [@"77.579494" floatValue]);
+        maker3.title=@"TM 3";
+        maker3.snippet=@"Jp nagar 2nd phase";
+        maker3.icon=[UIImage imageNamed:@"yellow.png"];
+        maker3.map=mapView_;
+        [markers addObject:maker3];
+        
+        
+        GMSMarker* maker4=[[GMSMarker alloc] init];
+        maker4.position=CLLocationCoordinate2DMake([@"12.9113782" floatValue], [@"77.5866573" floatValue]);
+        maker4.title=@"TM 3";
+        maker4.snippet=@"Jp nagar 2nd phase";
+        maker4.icon=[UIImage imageNamed:@"green.png"];
+        maker4.map=mapView_;
+        [markers addObject:maker4];
+        
+        
+        GMSMarker* maker5=[[GMSMarker alloc] init];
+        maker5.position=CLLocationCoordinate2DMake([@"12.8658517" floatValue], [@"77.5719908" floatValue]);
+        maker5.title=@"TM 3";
+        maker5.snippet=@"Jp nagar 2nd phase";
+        maker5.icon=[UIImage imageNamed:@"green.png"];
+        maker5.map=mapView_;
+        [markers addObject:maker5];
+        
+        
+        GMSMarker* maker6=[[GMSMarker alloc] init];
+        maker6.position=CLLocationCoordinate2DMake([@"12.903517" floatValue], [@"77.5920295" floatValue]);
+        maker6.title=@"TM 3";
+        maker6.snippet=@"Jp nagar 2nd phase";
+        maker6.icon=[UIImage imageNamed:@"yellow.png"];
+        maker6.map=mapView_;
+        [markers addObject:maker6];
+        
+        
+        
+        [self.viewMap addSubview:mapView_];
+        [self setHitMap:[UIColor grayColor]];
+    }
+    @catch (NSException *exception)
+    {
+        [mapView_ setHidden:YES];
+        return;
+    }
+    @finally
+    {
+        NSLog( @"In finally block");
+    }
+}
+
+
 
 -(void)loadMap:(NSDictionary *)dictMapLocation
 {
