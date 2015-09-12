@@ -36,7 +36,6 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self makeCircleWithColor:[UIColor redColor] andPercent:0.36 lineWidth:8 mainText:@"36%" subText:@"Revenue Generated" font:[UIFont systemFontOfSize:28] :[UIFont systemFontOfSize:10] onView:self.cView];
     [Utils makeCircleWithColor:[UIColor redColor] andPercent:0.36 lineWidth:5 mainText:@"36%" subText:@"Revenue Generated" font:[UIFont systemFontOfSize:24] :[UIFont systemFontOfSize:10] onView:self.cView];
 }
 
@@ -47,10 +46,16 @@
 
 -(IBAction)loginButtonActoin:(UIButton *)sender
 {
-    [LocalReminder setLocalReminderOfType:LocalReminderTypeAssign fireDate:[NSDate date] message:@"Hello" object:nil];
+    [LocalReminder setLocalReminderOfType:LocalReminderTypeLeaderBoard fireDate:[NSDate date] message:@"CONGRATULATIONS! Your rank just went up on leaderboard!" object:nil];
     [self performSegueWithIdentifier:@"SHOW_TAB" sender:nil];
 }
 
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"SHOW_TAB"]) {
+        ((AppDelegate*)[UIApplication sharedApplication].delegate).mainTabBarViewController = segue.destinationViewController;
+    }
+}
 
 
 @end

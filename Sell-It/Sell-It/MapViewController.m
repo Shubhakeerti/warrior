@@ -45,7 +45,7 @@ NSString * const kClinicLon=@"longitude";
     [self.navigationItem setHidesBackButton:YES animated:YES];
 
     
-    [self loadMap_TM:dictLocation];
+    [self loadMap:dictLocation];
 }
 
 -(void)setHitMap:(UIColor *)color

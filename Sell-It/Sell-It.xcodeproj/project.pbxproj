@@ -41,6 +41,7 @@
 		59E23E361BA3F1F5001E8C07 /* LocalReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E23E351BA3F1F5001E8C07 /* LocalReminder.m */; };
 		59E23E381BA3F33B001E8C07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E23E371BA3F33B001E8C07 /* UIKit.framework */; };
 		59E23E3B1BA3FBB0001E8C07 /* LocalNotiVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E23E3A1BA3FBB0001E8C07 /* LocalNotiVCViewController.m */; };
+		59E23E3D1BA40D5F001E8C07 /* Artboard 39.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E23E3C1BA40D5F001E8C07 /* Artboard 39.png */; };
 		792DB71E1BA3715D00A7E79E /* TM1.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DB71D1BA3715D00A7E79E /* TM1.png */; };
 		792DB7201BA3733A00A7E79E /* TM2.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DB71F1BA3733A00A7E79E /* TM2.png */; };
 		792DB7221BA3738800A7E79E /* TM3.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DB7211BA3738800A7E79E /* TM3.png */; };
@@ -126,6 +127,7 @@
 		59E23E371BA3F33B001E8C07 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		59E23E391BA3FBB0001E8C07 /* LocalNotiVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalNotiVCViewController.h; sourceTree = "<group>"; };
 		59E23E3A1BA3FBB0001E8C07 /* LocalNotiVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalNotiVCViewController.m; sourceTree = "<group>"; };
+		59E23E3C1BA40D5F001E8C07 /* Artboard 39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Artboard 39.png"; sourceTree = "<group>"; };
 		792DB71D1BA3715D00A7E79E /* TM1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TM1.png; sourceTree = "<group>"; };
 		792DB71F1BA3733A00A7E79E /* TM2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TM2.png; sourceTree = "<group>"; };
 		792DB7211BA3738800A7E79E /* TM3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TM3.png; sourceTree = "<group>"; };
@@ -214,7 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				22204D7E1BA3403E000D43D6 /* LeaderBoard */,
-				22204D7E1BA3403E000D43D6 /* LeaderBoard */,
 				22204D8B1BA39B27000D43D6 /* HTTPClass */,
 				222D29C81BA2ED0E00D59CB1 /* AppDelegate.h */,
 				222D29C91BA2ED0E00D59CB1 /* AppDelegate.m */,
@@ -231,7 +232,6 @@
 				222D29F61BA2F14600D59CB1 /* SMDetailViewController.h */,
 				222D29F71BA2F14600D59CB1 /* SMDetailViewController.m */,
 				222D29F91BA2F16200D59CB1 /* SMConfigurationViewController.h */,
-				222D29FA1BA2F16200D59CB1 /* SMConfigurationViewController.m */,
 				222D29FC1BA2F19000D59CB1 /* FilterViewController.h */,
 				222D29FD1BA2F19000D59CB1 /* FilterViewController.m */,
 				222D29FA1BA2F16200D59CB1 /* SMConfigurationViewController.m */,
@@ -239,6 +239,7 @@
 				59E23E351BA3F1F5001E8C07 /* LocalReminder.m */,
 				59E23E391BA3FBB0001E8C07 /* LocalNotiVCViewController.h */,
 				59E23E3A1BA3FBB0001E8C07 /* LocalNotiVCViewController.m */,
+				59E23E3C1BA40D5F001E8C07 /* Artboard 39.png */,
 				59E23E1B1BA384CF001E8C07 /* tableCells */,
 				22204D851BA365C5000D43D6 /* Utils.h */,
 				22204D861BA365C5000D43D6 /* Utils.m */,
@@ -407,6 +408,7 @@
 				222D29D81BA2ED0E00D59CB1 /* LaunchScreen.xib in Resources */,
 				792DB71E1BA3715D00A7E79E /* TM1.png in Resources */,
 				222D29D51BA2ED0E00D59CB1 /* Images.xcassets in Resources */,
+				59E23E3D1BA40D5F001E8C07 /* Artboard 39.png in Resources */,
 				7941520D1BA3F4A80012ED2E /* yellow.png in Resources */,
 				792DB7201BA3733A00A7E79E /* TM2.png in Resources */,
 				794152081BA3F4850012ED2E /* green.png in Resources */,
