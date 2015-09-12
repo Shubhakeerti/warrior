@@ -54,9 +54,6 @@
                                                            [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:21.0], NSFontAttributeName, nil]];
     [HTTPConnectoin getSharedInstance].delegate = self;
     self.rankingDict = [[NSMutableDictionary alloc] init];
-    self.timeButton.layer.cornerRadius = 5.0;
-    self.timeButton.layer.borderWidth = 2.0;
-    self.timeButton.layer.borderColor = [UIColor colorWithRed:54.0/255.0 green:142.0/255.0 blue:244.0/255.0 alpha:1.0].CGColor;
     [self.timeButton setTintColor:[UIColor colorWithRed:54.0/255.0 green:142.0/255.0 blue:244.0/255.0 alpha:1.0]];
     self.time = @"current_week";
     [self.timeButton setTitle:@"This Week" forState:UIControlStateNormal];
@@ -95,7 +92,6 @@
     cell.terManagerLoaclityLabel.text = [[self.terManagerArray objectAtIndex:indexPath.row] objectForKey:@"sales_city"];
     NSURL *urlString =[NSURL URLWithString:[NSString stringWithFormat:@"https://accounts.practo.com/profile_picture/%@/medium_thumbnail",[[self.terManagerArray objectAtIndex:indexPath.row] objectForKey:@"claimed_sales_user_id"]]];
     [cell.terManagerImageView sd_setImageWithURL:urlString placeholderImage:[Utils settingImageForContactsWithName:cell.terManagerNameLabel.text withKey:cell.terManagerNameLabel.text] options:SDWebImageRetryFailed];
-//    cell.terManagerImageView.image = [Utils settingImageForContactsWithName:cell.terManagerNameLabel.text withKey:cell.terManagerNameLabel.text];
     cell.terManagerSalesCount.text = [NSString stringWithFormat:@"%@",[[self.terManagerArray objectAtIndex:indexPath.row] objectForKey:@"total_count"]];
     cell.rankingImageView.image = [self getRandomImageForIndexPath:[[self.terManagerArray objectAtIndex:indexPath.row] objectForKey:@"claimed_sales_user_id"]];
     [Utils cropViewCircle:cell.terManagerImageView];
