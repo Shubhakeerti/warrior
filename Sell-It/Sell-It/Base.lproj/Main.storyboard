@@ -1312,11 +1312,11 @@
             </objects>
             <point key="canvasLocation" x="812" y="1275"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Dashboard-->
         <scene sceneID="FWf-uM-Jnq">
             <objects>
                 <navigationController id="c8p-xY-TRi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="ZXq-w6-pYL">
+                    <tabBarItem key="tabBarItem" title="Dashboard" id="ZXq-w6-pYL">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
@@ -1511,7 +1511,7 @@
         <scene sceneID="j1L-74-8Df">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ODp-iM-ALl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Leaderboard" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Leaderboard" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="mgt-f5-ncG">
@@ -1527,11 +1527,11 @@
             </objects>
             <point key="canvasLocation" x="1114" y="300"/>
         </scene>
-        <!--First-->
+        <!--Maps-->
         <scene sceneID="RWJ-Z2-gDg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="60q-Bt-Zce" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Maps" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="B03-Xp-86W">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1556,10 +1556,8 @@
         <image name="blue.png" width="27" height="28"/>
         <image name="cross.png" width="102" height="102"/>
         <image name="down.png" width="35" height="27"/>
-        <image name="first" width="30" height="30"/>
         <image name="green.png" width="27" height="28"/>
         <image name="red.png" width="27" height="28"/>
-        <image name="second" width="30" height="30"/>
         <image name="yellow.png" width="27" height="28"/>
     </resources>
 </document>

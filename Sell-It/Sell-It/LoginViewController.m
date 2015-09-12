@@ -77,7 +77,7 @@
 -(void)creatingTabBarItemWithTitle:(UITabBarItem *)tabItem withTitle:(NSString *)title{
     tabItem.title = title;
     tabItem.titlePositionAdjustment = UIOffsetMake(0, -5.0);
-    tabItem.imageInsets = UIEdgeInsetsMake(10, 10, 10, 10);
+//    tabItem.imageInsets = UIEdgeInsetsMake(10, 10, 10, 10);
     
     if ([title isEqualToString:@"Maps"])
     {

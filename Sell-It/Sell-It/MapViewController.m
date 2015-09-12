@@ -40,7 +40,7 @@ NSString * const kClinicLon=@"longitude";
     self.navigationController.navigationBarHidden = NO;
     self.navigationItem.leftBarButtonItem=nil;
     self.navigationItem.hidesBackButton=YES;
-    self.navigationController.topViewController.title = @"Ares";
+    self.navigationController.topViewController.title = @"Maps";
 
     
     [self.navigationItem setHidesBackButton:YES animated:YES];
