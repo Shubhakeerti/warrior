@@ -20,6 +20,7 @@ typedef enum {
 @property (strong,nonatomic) UITabBarController* mainTabBarViewController;
 +(AppDelegate*)sharedAppdelegate;
 @property (nonatomic,strong) NSArray *colorArray;
+@property (nonatomic, strong) NSMutableArray *terManagerArray1;
 
 @end
 

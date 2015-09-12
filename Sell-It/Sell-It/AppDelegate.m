@@ -48,6 +48,13 @@
     }
     [GMSServices provideAPIKey:@"AIzaSyDHpR8juvIkHlIEt0JfXuOO1tppeStF-GY"];
     
+    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Doclist_json (1)" ofType:@"txt"];
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    self.terManagerArray1 = [[NSMutableArray alloc] initWithArray:[json objectForKey:@"TSM"]];
+
+    
     return YES;
 }
 
