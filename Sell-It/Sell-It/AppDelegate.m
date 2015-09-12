@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LocalNotiVCViewController.h"
+#import "LocalReminder.h"
 
 #import <GoogleMaps/GoogleMaps.h>
 @interface AppDelegate ()
@@ -56,9 +57,35 @@
     rootNavViewController = (UINavigationController*)[UIApplication sharedApplication].keyWindow.rootViewController;
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     LocalNotiVCViewController*modal = [storyboard instantiateViewControllerWithIdentifier:@"ModalNoti"];
-    modal.modalPresentationStyle = UIModalPresentationFormSheet;
-    modal.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-    [rootNavViewController.topViewController presentViewController:modal animated:YES completion:^{
+    ReminderType type = [userInfo[KLM_ReminderType] intValue];
+    modal.buttonHidden = true;
+    switch (type) {
+        case LocalReminderTypeAssign:
+        {
+            modal.string1 = @"New Tasks";
+        }
+            break;
+        case LocalReminderTypeLeadConversion:
+        {
+            modal.string1 = @"Lead Converted";
+        }
+            break;
+        case LocalReminderTypeLeaderBoard:
+        {
+            
+            modal.string1 = @"Rank Up!";
+            modal.buttonHidden = false;
+        }
+            break;
+            
+        default:
+            break;
+    }
+    modal.label2.text = userInfo[KLM_Message];
+    modal.providesPresentationContextTransitionStyle = YES;
+    modal.definesPresentationContext = YES;
+    [modal setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+    [rootNavViewController.visibleViewController presentViewController:modal animated:YES completion:^{
         
     }];
 }
@@ -68,8 +95,34 @@
     rootNavViewController = (UINavigationController*)[UIApplication sharedApplication].keyWindow.rootViewController;
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     LocalNotiVCViewController*modal = [storyboard instantiateViewControllerWithIdentifier:@"ModalNoti"];
-    modal.modalPresentationStyle = UIModalPresentationPopover;
-    modal.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    ReminderType type = [notification.userInfo[KLM_ReminderType] intValue];
+    modal.buttonHidden = true;
+    switch (type) {
+        case LocalReminderTypeAssign:
+        {
+            modal.string1 = @"New Tasks";
+        }
+            break;
+        case LocalReminderTypeLeadConversion:
+        {
+            modal.string1 = @"Lead Converted";
+        }
+            break;
+        case LocalReminderTypeLeaderBoard:
+        {
+            
+            modal.string1 = @"Rank Up!";
+            modal.buttonHidden = false;
+        }
+            break;
+            
+        default:
+            break;
+    }
+    modal.string2 = notification.userInfo[KLM_Message];
+    modal.providesPresentationContextTransitionStyle = YES;
+    modal.definesPresentationContext = YES;
+    [modal setModalPresentationStyle:UIModalPresentationOverCurrentContext];
     [rootNavViewController.visibleViewController presentViewController:modal animated:YES completion:^{
         
     }];
