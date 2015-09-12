@@ -23,6 +23,9 @@
     [super viewDidLoad];
     self.navigationController.navigationBarHidden = YES;
     [self.loginButton addTarget:self action:@selector(loginButtonActoin:) forControlEvents:UIControlEventTouchDragInside];
+    self.loginButton.layer.cornerRadius = 3.0;
+    self.loginButton.layer.borderWidth = 1.0;
+    self.loginButton.layer.borderColor = [UIColor whiteColor].CGColor;
     
     // Do any additional setup after loading the view.
 }
@@ -35,7 +38,6 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [Utils makeCircleWithColor:[UIColor redColor] andPercent:0.36 lineWidth:5 mainText:@"36%" subText:@"Revenue Generated" font:[UIFont systemFontOfSize:24] :[UIFont systemFontOfSize:10] onView:self.cView];
 }
 
 - (void)didReceiveMemoryWarning {
