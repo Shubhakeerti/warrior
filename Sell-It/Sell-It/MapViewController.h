@@ -33,6 +33,12 @@
 @property (weak, nonatomic) IBOutlet UIView *viewSalesManagerView;
 - (IBAction)doctorCompletedAction:(id)sender;
 
+- (IBAction)docToComplete:(id)sender;
+
+- (IBAction)docInProgress:(id)sender;
+
+- (IBAction)docDec:(id)sender;
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *heightDoctorCompltedDeatilsView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *heightDoctorView;
 

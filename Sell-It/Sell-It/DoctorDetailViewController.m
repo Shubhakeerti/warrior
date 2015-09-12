@@ -17,6 +17,12 @@
 @end
 
 @implementation DoctorDetailViewController
+-(void)initWithDoctorDetails:(NSString *)strTarget
+{
+    target=strTarget;
+}
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,6 +36,9 @@
 //    NSArray *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
 //    self.terManagerArray = [[NSMutableArray alloc] initWithArray:json];
     [self.doctorTableView reloadData];
+    
+    [self.btnStatus setTitle:target forState:UIControlStateNormal]; // To set the title
+    
     // Do any additional setup after loading the view.
 }
 

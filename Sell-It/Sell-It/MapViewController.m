@@ -213,10 +213,44 @@ NSString * const kClinicLon=@"longitude";
     // Dispose of any resources that can be recreated.
 }
 
+
 - (IBAction)doctorCompletedAction:(id)sender {
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     DoctorDetailViewController *doctorDetailViewController = [storyboard instantiateViewControllerWithIdentifier:@"DoctorDetailViewController"];
+    UIButton *button = (UIButton *)sender;
+    NSString *buttonTitle = button.currentTitle;
+    [doctorDetailViewController initWithDoctorDetails:buttonTitle];
+    [self.navigationController presentViewController:doctorDetailViewController animated:YES completion:nil];
+
+}
+
+- (IBAction)docToComplete:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    DoctorDetailViewController *doctorDetailViewController = [storyboard instantiateViewControllerWithIdentifier:@"DoctorDetailViewController"];
+    UIButton *button = (UIButton *)sender;
+    NSString *buttonTitle = button.currentTitle;
+    [doctorDetailViewController initWithDoctorDetails:buttonTitle];
+    [self.navigationController presentViewController:doctorDetailViewController animated:YES completion:nil];
+
+}
+
+- (IBAction)docInProgress:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    DoctorDetailViewController *doctorDetailViewController = [storyboard instantiateViewControllerWithIdentifier:@"DoctorDetailViewController"];
+    UIButton *button = (UIButton *)sender;
+    NSString *buttonTitle = button.currentTitle;
+    [doctorDetailViewController initWithDoctorDetails:buttonTitle];
+    [self.navigationController presentViewController:doctorDetailViewController animated:YES completion:nil];
+
+}
+
+- (IBAction)docDec:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    DoctorDetailViewController *doctorDetailViewController = [storyboard instantiateViewControllerWithIdentifier:@"DoctorDetailViewController"];
+    UIButton *button = (UIButton *)sender;
+    NSString *buttonTitle = button.currentTitle;
+    [doctorDetailViewController initWithDoctorDetails:buttonTitle];
     [self.navigationController presentViewController:doctorDetailViewController animated:YES completion:nil];
 
 }
