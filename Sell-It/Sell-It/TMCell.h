@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *terManagerLoaclityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *terManagerSalesCount;
 @property (weak, nonatomic) IBOutlet UIImageView *rankingImageView;
+@property (weak, nonatomic) IBOutlet UIButton *btnClaim;
 
 @end

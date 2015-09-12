@@ -30,6 +30,18 @@
 @property (weak, nonatomic) IBOutlet UIView *viewMap;
 @property (weak, nonatomic) IBOutlet UIView *viewTMView;
 
+@property (weak, nonatomic) IBOutlet UIView *viewSalesManagerView;
+- (IBAction)doctorCompletedAction:(id)sender;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *heightDoctorCompltedDeatilsView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *heightDoctorView;
+
+
+
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *heightTMView;
+
+
 
 @end
 

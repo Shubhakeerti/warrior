@@ -55,6 +55,9 @@
 		7941520C1BA3F4A80012ED2E /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 7941520A1BA3F4A80012ED2E /* blue.png */; };
 		7941520D1BA3F4A80012ED2E /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7941520B1BA3F4A80012ED2E /* yellow.png */; };
 		7941520F1BA3F4CF0012ED2E /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = 7941520E1BA3F4CF0012ED2E /* down.png */; };
+		794152111BA412850012ED2E /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 794152101BA412850012ED2E /* cross.png */; };
+		794152131BA413090012ED2E /* Doclist_json.txt in Resources */ = {isa = PBXBuildFile; fileRef = 794152121BA413090012ED2E /* Doclist_json.txt */; };
+		794152151BA417FD0012ED2E /* Doclist_json (1).txt in Resources */ = {isa = PBXBuildFile; fileRef = 794152141BA417FD0012ED2E /* Doclist_json (1).txt */; };
 		F186BEEC88F269DB50733483 /* libPods-Sell-It.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1086BD91FADB077A126CDBC6 /* libPods-Sell-It.a */; };
 /* End PBXBuildFile section */
 
@@ -146,6 +149,9 @@
 		7941520A1BA3F4A80012ED2E /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 		7941520B1BA3F4A80012ED2E /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
 		7941520E1BA3F4CF0012ED2E /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
+		794152101BA412850012ED2E /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
+		794152121BA413090012ED2E /* Doclist_json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Doclist_json.txt; sourceTree = "<group>"; };
+		794152141BA417FD0012ED2E /* Doclist_json (1).txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Doclist_json (1).txt"; sourceTree = "<group>"; };
 		E2E57B97E4BF54DEA7F619D6 /* Pods-Sell-It.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sell-It.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sell-It/Pods-Sell-It.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -195,6 +201,7 @@
 		22204D991BA40184000D43D6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				794152101BA412850012ED2E /* cross.png */,
 				7941520E1BA3F4CF0012ED2E /* down.png */,
 				7941520A1BA3F4A80012ED2E /* blue.png */,
 				7941520B1BA3F4A80012ED2E /* yellow.png */,
@@ -250,6 +257,8 @@
 				222D29EE1BA2F0D100D59CB1 /* DashBoardViewController.m */,
 				222D29F01BA2F12800D59CB1 /* DoctorDetailViewController.h */,
 				222D29F11BA2F12800D59CB1 /* DoctorDetailViewController.m */,
+				794152121BA413090012ED2E /* Doclist_json.txt */,
+				794152141BA417FD0012ED2E /* Doclist_json (1).txt */,
 				222D29F31BA2F13800D59CB1 /* TMDetailViewController.h */,
 				222D29F41BA2F13800D59CB1 /* TMDetailViewController.m */,
 				222D29F61BA2F14600D59CB1 /* SMDetailViewController.h */,
@@ -425,6 +434,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				794152111BA412850012ED2E /* cross.png in Resources */,
 				22204D9C1BA40502000D43D6 /* Login_BackGround.png in Resources */,
 				222D29D31BA2ED0E00D59CB1 /* Main.storyboard in Resources */,
 				22204D961BA3DA8F000D43D6 /* Down_arrow_Red.png in Resources */,
@@ -435,7 +445,9 @@
 				59E23E3D1BA40D5F001E8C07 /* Artboard 39.png in Resources */,
 				7941520D1BA3F4A80012ED2E /* yellow.png in Resources */,
 				792DB7201BA3733A00A7E79E /* TM2.png in Resources */,
+				794152131BA413090012ED2E /* Doclist_json.txt in Resources */,
 				794152081BA3F4850012ED2E /* green.png in Resources */,
+				794152151BA417FD0012ED2E /* Doclist_json (1).txt in Resources */,
 				7941520F1BA3F4CF0012ED2E /* down.png in Resources */,
 				2211D6D91BA4094700F524A7 /* Mail.png in Resources */,
 				794152091BA3F4850012ED2E /* red.png in Resources */,

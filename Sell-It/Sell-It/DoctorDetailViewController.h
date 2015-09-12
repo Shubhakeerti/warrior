@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface DoctorDetailViewController : UIViewController
+{
+    
+}
+
+- (IBAction)backAction:(id)sender;
 
 @end

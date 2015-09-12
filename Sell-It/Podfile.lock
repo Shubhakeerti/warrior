@@ -35,4 +35,4 @@ SPEC CHECKSUMS:
   GoogleMaps: 5c92e599b07b0a2a9b367c5dd128edc629bddfea
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
 
-COCOAPODS: 0.36.4
+COCOAPODS: 0.36.0

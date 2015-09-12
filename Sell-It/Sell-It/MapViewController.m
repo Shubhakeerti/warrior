@@ -7,7 +7,8 @@
 //
 
 #import "MapViewController.h"
-
+#import "AppDelegate.h"
+#import "DoctorDetailViewController.h"
 NSString * const kClinicLat=@"latitude";
 NSString * const kClinicLon=@"longitude";
 
@@ -45,7 +46,17 @@ NSString * const kClinicLon=@"longitude";
     [self.navigationItem setHidesBackButton:YES animated:YES];
 
     
-    [self loadMap:dictLocation];
+    AppDelegate * appdelegate = [[UIApplication sharedApplication]delegate];
+    if(true)
+    {
+        [self loadMap_TM:dictLocation];
+        [self.viewTMView setHidden:NO];
+        [self.viewSalesManagerView setHidden:YES];
+    }else{
+        [self loadMap:dictLocation];
+        [self.viewTMView setHidden:YES];
+        [self.viewSalesManagerView setHidden:NO];
+    }
 }
 
 -(void)setHitMap:(UIColor *)color
@@ -90,8 +101,6 @@ NSString * const kClinicLon=@"longitude";
         
         GMSMarker* maker2=[[GMSMarker alloc] init];
         maker2.position=CLLocationCoordinate2DMake([@"12.9118374" floatValue], [@"77.57949499999995" floatValue]);
-        maker2.title=@"TM 2";
-        maker2.snippet=@"Jp nagar 1st phase";
         maker2.icon=[UIImage imageNamed:@"blue.png"];
         maker2.map=mapView_;
         [markers addObject:maker2];
@@ -99,8 +108,6 @@ NSString * const kClinicLon=@"longitude";
         
         GMSMarker* maker3=[[GMSMarker alloc] init];
         maker3.position=CLLocationCoordinate2DMake([@"12.8940928" floatValue], [@"77.579494" floatValue]);
-        maker3.title=@"TM 3";
-        maker3.snippet=@"Jp nagar 2nd phase";
         maker3.icon=[UIImage imageNamed:@"yellow.png"];
         maker3.map=mapView_;
         [markers addObject:maker3];
@@ -108,8 +115,6 @@ NSString * const kClinicLon=@"longitude";
         
         GMSMarker* maker4=[[GMSMarker alloc] init];
         maker4.position=CLLocationCoordinate2DMake([@"12.9113782" floatValue], [@"77.5866573" floatValue]);
-        maker4.title=@"TM 3";
-        maker4.snippet=@"Jp nagar 2nd phase";
         maker4.icon=[UIImage imageNamed:@"green.png"];
         maker4.map=mapView_;
         [markers addObject:maker4];
@@ -117,8 +122,6 @@ NSString * const kClinicLon=@"longitude";
         
         GMSMarker* maker5=[[GMSMarker alloc] init];
         maker5.position=CLLocationCoordinate2DMake([@"12.8658517" floatValue], [@"77.5719908" floatValue]);
-        maker5.title=@"TM 3";
-        maker5.snippet=@"Jp nagar 2nd phase";
         maker5.icon=[UIImage imageNamed:@"green.png"];
         maker5.map=mapView_;
         [markers addObject:maker5];
@@ -126,8 +129,6 @@ NSString * const kClinicLon=@"longitude";
         
         GMSMarker* maker6=[[GMSMarker alloc] init];
         maker6.position=CLLocationCoordinate2DMake([@"12.903517" floatValue], [@"77.5920295" floatValue]);
-        maker6.title=@"TM 3";
-        maker6.snippet=@"Jp nagar 2nd phase";
         maker6.icon=[UIImage imageNamed:@"yellow.png"];
         maker6.map=mapView_;
         [markers addObject:maker6];
@@ -212,4 +213,11 @@ NSString * const kClinicLon=@"longitude";
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)doctorCompletedAction:(id)sender {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    DoctorDetailViewController *doctorDetailViewController = [storyboard instantiateViewControllerWithIdentifier:@"DoctorDetailViewController"];
+    [self.navigationController presentViewController:doctorDetailViewController animated:YES completion:nil];
+
+}
 @end

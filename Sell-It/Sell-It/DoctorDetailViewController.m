@@ -7,8 +7,12 @@
 //
 
 #import "DoctorDetailViewController.h"
+#import "TMCell.h"
+#import "Utils.h"
 
 @interface DoctorDetailViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *doctorTableView;
+@property (nonatomic, strong) NSMutableArray *terManagerArray;
 
 @end
 
@@ -16,6 +20,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Doclist_json (1)" ofType:@"txt"];
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    self.terManagerArray = [[NSMutableArray alloc] initWithArray:[json objectForKey:@"TSM"]];
+//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Doclist_json" ofType:@"txt"];
+//    NSData *data = [NSData dataWithContentsOfFile:filePath];
+//    NSArray *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+//    self.terManagerArray = [[NSMutableArray alloc] initWithArray:json];
+    [self.doctorTableView reloadData];
     // Do any additional setup after loading the view.
 }
 
@@ -24,14 +38,46 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.terManagerArray.count;
 }
-*/
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    TMCell* cell = (TMCell*)[tableView dequeueReusableCellWithIdentifier:@"TMCell"];
+    if (cell == nil) {
+        cell = [[TMCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"TMCell"];
+    }
+    cell.terManagerNameLabel.text = [[self.terManagerArray objectAtIndex:indexPath.row] objectForKey:@"Name"];
+    cell.terManagerLoaclityLabel.text = [[self.terManagerArray objectAtIndex:indexPath.row] objectForKey:@"loc"];
+    
+    cell.terManagerImageView.image = [Utils settingImageForContactsWithName:cell.terManagerNameLabel.text withKey:cell.terManagerNameLabel.text];
+    
+//    cell.terManagerSalesCount.text = [NSString stringWithFormat:@"%@",[[self.terManagerArray objectAtIndex:indexPath.row] objectForKey:@"total_count"]];
+    cell.terManagerSalesCount.hidden = YES;
+    cell.rankingImageView.hidden = YES;
+    [Utils cropViewCircle:cell.terManagerImageView];
+    
+    
+    [cell.btnClaim addTarget:self action:@selector(doctorAction:) forControlEvents:UIControlEventTouchUpInside];
+    cell.btnClaim.tag = indexPath.row;
+    
+    return cell;
+}
+- (IBAction)doctorAction:(id)sender {
+    
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 66;
+}
+
+-(UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc] init];
+    return view;
+}
+
+- (IBAction)backAction:(id)sender {
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:^{}];
+}
 @end
