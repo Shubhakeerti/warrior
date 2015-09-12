@@ -52,6 +52,7 @@
 //                                                           [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0], NSForegroundColorAttributeName,
 //                                                           shadow, NSShadowAttributeName,
 //                                                           [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:21.0], NSFontAttributeName, nil]];
+    UIFont *font = [UIFont fontWithName:@"HelveticaNeue-Light" size:10.0f];
     [HTTPConnectoin getSharedInstance].delegate = self;
     self.rankingDict = [[NSMutableDictionary alloc] init];
     [self.timeButton setTintColor:[UIColor colorWithRed:54.0/255.0 green:142.0/255.0 blue:244.0/255.0 alpha:1.0]];
