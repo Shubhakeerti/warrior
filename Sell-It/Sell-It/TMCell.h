@@ -12,5 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *terManagerImageView;
 @property (weak, nonatomic) IBOutlet UILabel *terManagerNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *terManagerLoaclityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *terManagerSalesCount;
+@property (weak, nonatomic) IBOutlet UIImageView *rankingImageView;
 
 @end

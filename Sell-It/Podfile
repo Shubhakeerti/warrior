@@ -5,7 +5,7 @@ target 'Sell-It' do
 
 pod "AFNetworking", "~> 2.0"
 pod "SDWebImage", '~>3.7'
-
+pod 'GoogleMaps'
 end
 
 target 'Sell-ItTests' do

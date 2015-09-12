@@ -8,14 +8,22 @@
 
 #import "LeadBoardViewController.h"
 #import "TMCell.h"
-#import <CoreImage/CoreImage.h>
+#import "Utils.h"
+#import "HTTPConnectoin.h"
 #import <UIImageView+WebCache.h>
 
 
-@interface LeadBoardViewController ()
+@interface LeadBoardViewController ()<HttpDelegate,UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *terManagerTableView;
 @property (nonatomic, strong) NSMutableArray *terManagerArray;
-@property (nonatomic,strong) NSArray *colorArray;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentView;
+@property (weak, nonatomic) IBOutlet UIButton *timeButton;
+@property (weak, nonatomic) IBOutlet UIView *blurrView;
+@property(nonatomic,strong) NSString *time;
+@property (nonatomic,strong)NSString *page;
+@property BOOL isloadMore;
+@property (nonatomic,strong)NSMutableDictionary *rankingDict;
+
 @end
 
 @implementation LeadBoardViewController
@@ -25,18 +33,42 @@
     self.navigationController.navigationBarHidden = NO;
     self.navigationItem.leftBarButtonItem=nil;
     self.navigationItem.hidesBackButton=YES;
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"TMLeaderboard_json" ofType:@"txt"];
-    NSData *data = [NSData dataWithContentsOfFile:filePath];
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-    self.terManagerArray = [[NSMutableArray alloc] initWithArray:[json objectForKey:@"TM"]];
+    self.blurrView.hidden = YES;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    self.terManagerArray = [[NSMutableArray alloc]init];
     self.navigationController.navigationBarHidden = NO;
     self.navigationItem.leftBarButtonItem=nil;
     self.navigationItem.hidesBackButton=YES;
+    self.navigationItem.title = @"Leader Board";
+    self.page = @"1";
+    NSShadow* shadow = [NSShadow new];
+    shadow.shadowOffset = CGSizeMake(0.0f, 1.0f);
+    shadow.shadowColor = [UIColor redColor];
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0], NSForegroundColorAttributeName,
+                                                           shadow, NSShadowAttributeName,
+                                                           [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:21.0], NSFontAttributeName, nil]];
+    [HTTPConnectoin getSharedInstance].delegate = self;
+    self.rankingDict = [[NSMutableDictionary alloc] init];
+    [self.timeButton setTintColor:[UIColor colorWithRed:54.0/255.0 green:142.0/255.0 blue:244.0/255.0 alpha:1.0]];
+    self.time = @"current_week";
+    [self.timeButton setTitle:@"This Week" forState:UIControlStateNormal];
+    [self.timeButton addTarget:self action:@selector(changeDate:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIFont *font = [UIFont boldSystemFontOfSize:12.0f];
+    NSDictionary *attributes = [NSDictionary dictionaryWithObject:font
+                                                           forKey:NSFontAttributeName];
+    [self.segmentView setTitleTextAttributes:attributes
+                                    forState:UIControlStateNormal];
+    [self.segmentView addTarget:self action:@selector(segmentChanged:) forControlEvents:UIControlEventValueChanged];
+    [self.segmentView setTintColor:[UIColor colorWithRed:54.0/255.0 green:142.0/255.0 blue:244.0/255.0 alpha:1.0]];
+    [self doAPICall:0];
+    self.isloadMore = NO;
+    
 }
 -(void)viewDidAppear:(BOOL)animated
 {
@@ -56,10 +88,13 @@
     if (cell == nil) {
         cell = [[TMCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"TMCell"];
     }
-    cell.terManagerNameLabel.text = [[self.terManagerArray objectAtIndex:indexPath.row] objectForKey:@"Name"];
-    cell.terManagerLoaclityLabel.text = [[self.terManagerArray objectAtIndex:indexPath.row] objectForKey:@"loc"];
-    cell.terManagerImageView.image = [self settingImageForContactsWithName:cell.terManagerNameLabel.text withKey:cell.terManagerNameLabel.text];
-    [self cropViewCircle:cell.terManagerImageView];
+    cell.terManagerNameLabel.text = [[self.terManagerArray objectAtIndex:indexPath.row] objectForKey:@"name"];
+    cell.terManagerLoaclityLabel.text = [[self.terManagerArray objectAtIndex:indexPath.row] objectForKey:@"sales_city"];
+    NSURL *urlString =[NSURL URLWithString:[NSString stringWithFormat:@"https://accounts.practo.com/profile_picture/%@/medium_thumbnail",[[self.terManagerArray objectAtIndex:indexPath.row] objectForKey:@"claimed_sales_user_id"]]];
+    [cell.terManagerImageView sd_setImageWithURL:urlString placeholderImage:[Utils settingImageForContactsWithName:cell.terManagerNameLabel.text withKey:cell.terManagerNameLabel.text] options:SDWebImageRetryFailed];
+    cell.terManagerSalesCount.text = [NSString stringWithFormat:@"%@",[[self.terManagerArray objectAtIndex:indexPath.row] objectForKey:@"total_count"]];
+    cell.rankingImageView.image = [self getRandomImageForIndexPath:[[self.terManagerArray objectAtIndex:indexPath.row] objectForKey:@"claimed_sales_user_id"]];
+    [Utils cropViewCircle:cell.terManagerImageView];
     return cell;
 }
 
@@ -74,60 +109,148 @@
     return view;
 }
 
--(UIImage*)settingImageForContactsWithName:(NSString*)name withKey:(NSString *)key{
-    
-    if (self.colorArray == nil || self.colorArray.count == 0)
+-(void)getResponseCode:(NSInteger)responseCode withResponse:(NSDictionary *)response
+{
+    if (!self.isloadMore)
     {
-        [self setColorArray:[[NSArray alloc]initWithObjects:@"#33b679",@"#536173",@"#855e86",@"#df5948",@"#aeb857",@"#547bca",@"#ae6b23",@"#e5ae4f", nil]];
+        [self.terManagerArray removeAllObjects];
     }
-    UIImage *image;
-    if ([[SDImageCache sharedImageCache]diskImageExistsWithKey:key])
+    [self.terManagerArray addObjectsFromArray:[response objectForKey:@"leaderboard"] ];
+    NSLog(@"%@",response);
+    [self.terManagerTableView reloadData];
+    [self.blurrView setHidden:YES];
+    self.isloadMore = NO;
+}
+
+-(void)segmentChanged:(UISegmentedControl*)sender
+{
+    [self doAPICall:sender.selectedSegmentIndex];
+}
+-(void)doAPICall:(int)index
+{
+    self.blurrView.hidden = NO;
+    NSString *serviceName;
+    NSString *type;
+    switch (index) {
+        case 0:
+            serviceName = @"Ray";
+            type = @"hunting";
+            break;
+        case 1:
+            serviceName = @"Ray";
+            type = @"farming";
+            break;
+        case 2:
+            serviceName = @"Fabric%20Ad";
+            type = nil;
+            break;
+        case 3:
+            serviceName = @"Communicator%20SMS";
+            type = nil;
+            break;
+            
+        default:
+            break;
+    }
+    NSString *urlString;
+    if (type!=nil)
     {
-        image = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:key];
-        if (image)
+        urlString = [NSString stringWithFormat:@"https://epicenter.practo.com/api/v1/claimedpaymentreport?service_name=%@&sale_type=%@&time_range=%@&page=%@&include_pending_payments=true&with_recent_sale_getters=true",serviceName,type,self.time,self.page];
+    }
+    else
+    {
+        urlString = [NSString stringWithFormat:@"https://epicenter.practo.com/api/v1/claimedpaymentreport?service_name=%@&time_range=%@&page=%@&include_pending_payments=true&with_recent_sale_getters=true",serviceName,self.time,self.page];
+    }
+    [[HTTPConnectoin getSharedInstance] initializeHttpConnection:@"LeadBoard" withParams:nil withUrl:urlString withMethodType:GET withAuth:@"bf307e030b06cab814c0d6ae817f9125e6d74a01"];
+}
+
+-(void)changeDate:(UIButton *)sender
+{
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@""
+                                                             delegate:self
+                                                    cancelButtonTitle:@"Cancel"
+                                               destructiveButtonTitle:nil
+                                                    otherButtonTitles:@"This Week", @"This Month", @"This Quater",@"All", nil];
+    
+    [actionSheet showInView:self.view];
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    switch (buttonIndex)
+    {
+        case 0:
+            self.time = @"current_week";
+            [self.timeButton setTitle:@"This Week" forState:UIControlStateNormal];
+            break;
+        case 1:
+            self.time = @"current_month";
+            [self.timeButton setTitle:@"This Month" forState:UIControlStateNormal];
+            break;
+        case 2:
+            self.time = @"current_quarter";
+            [self.timeButton setTitle:@"This Quarter" forState:UIControlStateNormal];
+            break;
+        case 3:
+            self.time = @"all";
+            [self.timeButton setTitle:@"All" forState:UIControlStateNormal];
+            break;
+        default:
+            return;
+            break;
+    }
+    [self doAPICall:[self.segmentView selectedSegmentIndex]];
+}
+
+#pragma mark Scroll View Delegates
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    //load more logic
+    CGPoint offset = scrollView.contentOffset;
+    CGRect bounds = scrollView.bounds;
+    CGSize size = scrollView.contentSize;
+    UIEdgeInsets inset = scrollView.contentInset;
+    float y = offset.y + bounds.size.height - inset.bottom;
+    float h = size.height;
+    float reload_distance = -20;
+    if(y >= h + reload_distance) {
+        if (!self.isloadMore)
         {
-            return image;
+            self.isloadMore = YES;
+            NSInteger pageInteger = self.page.integerValue;
+            self.page = [NSString stringWithFormat:@"%d",pageInteger+1];
+            [self doAPICall:[self.segmentView selectedSegmentIndex]];
         }
     }
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 120)];
-    //    label.font = [UIFont boldSystemFontOfSize:30];
-    label.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:50];
-    label.textColor = [UIColor whiteColor];
-    label.textAlignment = NSTextAlignmentCenter;
-    NSInteger integer = abs(arc4random())%7;
-    NSString *randonColorHexString = [self.colorArray objectAtIndex:integer];
-    label.backgroundColor = [self colorWithHexString:randonColorHexString andAlpha:1.0f];
-    label.text = [[name substringToIndex:1] uppercaseString];
-    UIGraphicsBeginImageContext([label bounds].size);
-    [[label layer] renderInContext: UIGraphicsGetCurrentContext()];
-    image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    [[SDWebImageManager sharedManager] saveImageToCache:image forURL:[NSURL URLWithString:key]];
-    return image;
 }
 
--(UIColor *)colorWithHexString:(NSString *)hexString andAlpha:(float)alpha {
-    UIColor *col;
-    hexString = [hexString stringByReplacingOccurrencesOfString:@"#" withString:@"0x"];
-    uint hexValue;
-    if ([[NSScanner scannerWithString:hexString] scanHexInt:&hexValue]) {
-        col = [self colorWithHexValue:hexValue andAlpha:alpha];
-    } else {
-        col = [UIColor clearColor];
-    }
-    return col;
-}
-
--(UIColor *)colorWithHexValue:(uint)hexValue andAlpha:(float)alpha {
-    return [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16))/255.0 green:((float)((hexValue & 0xFF00) >> 8))/255.0 blue:((float)(hexValue & 0xFF))/255.0 alpha:alpha];
-}
-
--(void)cropViewCircle:(UIImageView *)view
+-(UIImage*)getRandomImageForIndexPath:(NSString*)terManagerId
 {
-    CALayer *imageLayer = view.layer;
-    [imageLayer setCornerRadius:view.frame.size.width/2];
-    [imageLayer setMasksToBounds:YES];
-    imageLayer = nil;
+    int integer;
+    if ([self.rankingDict objectForKey:terManagerId])
+    {
+        integer = [[self.rankingDict objectForKey:terManagerId] intValue];
+    }
+    else
+    {
+        integer= (arc4random())%3;
+        [self.rankingDict setObject:[NSString stringWithFormat:@"%d",integer] forKey:terManagerId];
+    }
+    
+    switch (integer) {
+        case 0:
+            
+            return [UIImage imageNamed:@"Up_Arrow_green.png"];
+            break;
+        case 1:
+            return [UIImage imageNamed:@"Down_arrow_Red.png"];
+            break;
+        case 2:
+            return nil;
+            break;
+            
+        default:
+            return nil;
+            break;
+    }
 }
 
 @end

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "LocalNotiVCViewController.h"
 
+#import <GoogleMaps/GoogleMaps.h>
 @interface AppDelegate ()
 
 @end
@@ -18,6 +19,9 @@
     UINavigationController* rootNavViewController;
 }
 
++(AppDelegate*)sharedAppdelegate{
+    return (AppDelegate*)[[UIApplication sharedApplication] delegate];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -41,6 +45,8 @@
             [self performSelector:@selector(handleLocalNotifications:) withObject:localNotif.userInfo afterDelay:1];
         }];
     }
+    [GMSServices provideAPIKey:@"AIzaSyDHpR8juvIkHlIEt0JfXuOO1tppeStF-GY"];
+    
     return YES;
 }
 
