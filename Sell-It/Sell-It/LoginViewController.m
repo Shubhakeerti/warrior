@@ -26,7 +26,7 @@
     [self.loginButton addTarget:self action:@selector(loginButtonActoin:) forControlEvents:UIControlEventTouchDragInside];
     self.loginButton.layer.cornerRadius = 3.0;
     self.loginButton.layer.borderWidth = 1.0;
-    self.loginButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.loginButton.layer.borderColor = [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:0.5].CGColor;
     
     // Do any additional setup after loading the view.
 }
