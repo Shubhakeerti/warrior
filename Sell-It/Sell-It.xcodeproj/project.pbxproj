@@ -33,6 +33,9 @@
 		59E23E2D1BA3B216001E8C07 /* DataTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E23E2C1BA3B216001E8C07 /* DataTableViewCell2.m */; };
 		59E23E301BA3B224001E8C07 /* DataTableViewCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E23E2F1BA3B224001E8C07 /* DataTableViewCell3.m */; };
 		59E23E331BA3E4CB001E8C07 /* DataTableViewCell4.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E23E321BA3E4CB001E8C07 /* DataTableViewCell4.m */; };
+		59E23E361BA3F1F5001E8C07 /* LocalReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E23E351BA3F1F5001E8C07 /* LocalReminder.m */; };
+		59E23E381BA3F33B001E8C07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E23E371BA3F33B001E8C07 /* UIKit.framework */; };
+		59E23E3B1BA3FBB0001E8C07 /* LocalNotiVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E23E3A1BA3FBB0001E8C07 /* LocalNotiVCViewController.m */; };
 		F186BEEC88F269DB50733483 /* libPods-Sell-It.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1086BD91FADB077A126CDBC6 /* libPods-Sell-It.a */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +100,11 @@
 		59E23E2F1BA3B224001E8C07 /* DataTableViewCell3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTableViewCell3.m; sourceTree = "<group>"; };
 		59E23E311BA3E4CB001E8C07 /* DataTableViewCell4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTableViewCell4.h; sourceTree = "<group>"; };
 		59E23E321BA3E4CB001E8C07 /* DataTableViewCell4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTableViewCell4.m; sourceTree = "<group>"; };
+		59E23E341BA3F1F5001E8C07 /* LocalReminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalReminder.h; sourceTree = "<group>"; };
+		59E23E351BA3F1F5001E8C07 /* LocalReminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalReminder.m; sourceTree = "<group>"; };
+		59E23E371BA3F33B001E8C07 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		59E23E391BA3FBB0001E8C07 /* LocalNotiVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalNotiVCViewController.h; sourceTree = "<group>"; };
+		59E23E3A1BA3FBB0001E8C07 /* LocalNotiVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalNotiVCViewController.m; sourceTree = "<group>"; };
 		E2E57B97E4BF54DEA7F619D6 /* Pods-Sell-It.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sell-It.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sell-It/Pods-Sell-It.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59E23E381BA3F33B001E8C07 /* UIKit.framework in Frameworks */,
 				222D2A501BA33F6300D59CB1 /* libPods-Sell-It-AFNetworking.a in Frameworks */,
 				222D2A511BA33F6300D59CB1 /* libPods-Sell-It-SDWebImage.a in Frameworks */,
 				F186BEEC88F269DB50733483 /* libPods-Sell-It.a in Frameworks */,
@@ -175,6 +184,10 @@
 				222D29FC1BA2F19000D59CB1 /* FilterViewController.h */,
 				222D29FD1BA2F19000D59CB1 /* FilterViewController.m */,
 				222D29FA1BA2F16200D59CB1 /* SMConfigurationViewController.m */,
+				59E23E341BA3F1F5001E8C07 /* LocalReminder.h */,
+				59E23E351BA3F1F5001E8C07 /* LocalReminder.m */,
+				59E23E391BA3FBB0001E8C07 /* LocalNotiVCViewController.h */,
+				59E23E3A1BA3FBB0001E8C07 /* LocalNotiVCViewController.m */,
 				59E23E1B1BA384CF001E8C07 /* tableCells */,
 				222D29D11BA2ED0E00D59CB1 /* Main.storyboard */,
 				222D29D41BA2ED0E00D59CB1 /* Images.xcassets */,
@@ -213,6 +226,7 @@
 		56E2754DF00D6F8EE06A8079 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				59E23E371BA3F33B001E8C07 /* UIKit.framework */,
 				222D2A4E1BA33F6300D59CB1 /* libPods-Sell-It-AFNetworking.a */,
 				222D2A4F1BA33F6300D59CB1 /* libPods-Sell-It-SDWebImage.a */,
 				1086BD91FADB077A126CDBC6 /* libPods-Sell-It.a */,
@@ -397,11 +411,13 @@
 				222D29CD1BA2ED0E00D59CB1 /* MapViewController.m in Sources */,
 				59E23E271BA38519001E8C07 /* TabTableViewCell.m in Sources */,
 				222D29F81BA2F14600D59CB1 /* SMDetailViewController.m in Sources */,
+				59E23E361BA3F1F5001E8C07 /* LocalReminder.m in Sources */,
 				59E23E1E1BA384E4001E8C07 /* NameTableViewCell.m in Sources */,
 				22204D811BA3406C000D43D6 /* TMCell.m in Sources */,
 				222D29EF1BA2F0D100D59CB1 /* DashBoardViewController.m in Sources */,
 				222D2A011BA2FF8D00D59CB1 /* LoginViewController.m in Sources */,
 				59E23E2A1BA3B209001E8C07 /* DataTableViewCell1.m in Sources */,
+				59E23E3B1BA3FBB0001E8C07 /* LocalNotiVCViewController.m in Sources */,
 				59E23E331BA3E4CB001E8C07 /* DataTableViewCell4.m in Sources */,
 				59E23E241BA3850E001E8C07 /* DatePickerTableViewCell.m in Sources */,
 				222D29C71BA2ED0E00D59CB1 /* main.m in Sources */,

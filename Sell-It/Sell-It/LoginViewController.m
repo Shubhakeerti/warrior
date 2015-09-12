@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-
+#import "LocalReminder.h"
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
@@ -98,6 +98,7 @@
 
 -(IBAction)loginButtonActoin:(UIButton *)sender
 {
+    [LocalReminder setLocalReminderOfType:LocalReminderTypeAssign fireDate:[NSDate date] message:@"Hello" object:nil];
     [self performSegueWithIdentifier:@"SHOW_TAB" sender:nil];
 }
 
