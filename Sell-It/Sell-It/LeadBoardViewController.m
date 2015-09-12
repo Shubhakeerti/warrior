@@ -48,18 +48,21 @@
     NSShadow* shadow = [NSShadow new];
     shadow.shadowOffset = CGSizeMake(0.0f, 1.0f);
     shadow.shadowColor = [UIColor redColor];
+    
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
                                                            [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0], NSForegroundColorAttributeName,
                                                            shadow, NSShadowAttributeName,
-                                                           [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:21.0], NSFontAttributeName, nil]];
+                                                           [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:9.0], NSFontAttributeName, nil]];
+    UIFont *font = [UIFont fontWithName:@"HelveticaNeue-Light" size:10.0f];
     [HTTPConnectoin getSharedInstance].delegate = self;
     self.rankingDict = [[NSMutableDictionary alloc] init];
     [self.timeButton setTintColor:[UIColor colorWithRed:54.0/255.0 green:142.0/255.0 blue:244.0/255.0 alpha:1.0]];
     self.time = @"current_week";
     [self.timeButton setTitle:@"This Week" forState:UIControlStateNormal];
+    [self.timeButton setFont:font];
     [self.timeButton addTarget:self action:@selector(changeDate:) forControlEvents:UIControlEventTouchUpInside];
     
-    UIFont *font = [UIFont boldSystemFontOfSize:12.0f];
+    font = [UIFont fontWithName:@"HelveticaNeue-Light" size:9.0f];
     NSDictionary *attributes = [NSDictionary dictionaryWithObject:font
                                                            forKey:NSFontAttributeName];
     [self.segmentView setTitleTextAttributes:attributes
@@ -94,13 +97,30 @@
     [cell.terManagerImageView sd_setImageWithURL:urlString placeholderImage:[Utils settingImageForContactsWithName:cell.terManagerNameLabel.text withKey:cell.terManagerNameLabel.text] options:SDWebImageRetryFailed];
     cell.terManagerSalesCount.text = [NSString stringWithFormat:@"%@",[[self.terManagerArray objectAtIndex:indexPath.row] objectForKey:@"total_count"]];
     cell.rankingImageView.image = [self getRandomImageForIndexPath:[[self.terManagerArray objectAtIndex:indexPath.row] objectForKey:@"claimed_sales_user_id"]];
+    int integer = [[self.rankingDict objectForKey:[[self.terManagerArray objectAtIndex:indexPath.row] objectForKey:@"claimed_sales_user_id"]] intValue];
+    switch (integer)
+    {
+        case 0:
+            [cell.terManagerSalesCount setTextColor:[UIColor colorWithRed:46.0/255.0 green:144.0/255.0 blue:39.0/255.0 alpha:1.0]];
+            break;
+        case 1:
+            [cell.terManagerSalesCount setTextColor:[UIColor redColor]];
+            break;
+        case 2:
+            [cell.terManagerSalesCount setTextColor:[UIColor colorWithRed:166.0/255.0 green:167.0/255.0 blue:169.0/255.0 alpha:1.0]];
+            break;
+        default:
+            [cell.terManagerSalesCount setTextColor:[UIColor colorWithRed:166.0/255.0 green:167.0/255.0 blue:169.0/255.0 alpha:1.0]];
+            break;
+    }
+    
     [Utils cropViewCircle:cell.terManagerImageView];
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 66;
+    return 54;
 }
 
 -(UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
