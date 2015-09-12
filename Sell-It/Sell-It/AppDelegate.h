@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+
+typedef enum {
+    ManagerRoleTypeSM,//0
+    ManagerRoleTypeTSM//1
+} ManagerRoleType;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

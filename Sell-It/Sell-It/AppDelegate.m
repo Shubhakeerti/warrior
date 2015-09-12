@@ -7,12 +7,17 @@
 //
 
 #import "AppDelegate.h"
+#import "LocalNotiVCViewController.h"
+
 #import <GoogleMaps/GoogleMaps.h>
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
+{
+    UINavigationController* rootNavViewController;
+}
 
 +(AppDelegate*)sharedAppdelegate{
     return (AppDelegate*)[[UIApplication sharedApplication] delegate];
@@ -20,9 +25,54 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    if ([application respondsToSelector:@selector(isRegisteredForRemoteNotifications)])
+    {
+        // iOS 8 Notifications
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+        
+        [application registerForRemoteNotifications];
+    }
+    else
+    {
+        // iOS < 8 Notifications
+        [application registerForRemoteNotificationTypes:
+         (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound)];
+    }
+    UILocalNotification *localNotif =
+    [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+    if (localNotif) {
+        [[NSNotificationCenter defaultCenter] addObserverForName:@"AppointmentHistoryViewControllerCreated" object:nil queue:nil usingBlock:^(NSNotification *note) {
+            [self performSelector:@selector(handleLocalNotifications:) withObject:localNotif.userInfo afterDelay:1];
+        }];
+    }
     [GMSServices provideAPIKey:@"AIzaSyDHpR8juvIkHlIEt0JfXuOO1tppeStF-GY"];
     
     return YES;
+}
+
+-(void)handleLocalNotifications:(NSDictionary*)userInfo
+{
+    //push view here
+    rootNavViewController = (UINavigationController*)[UIApplication sharedApplication].keyWindow.rootViewController;
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    LocalNotiVCViewController*modal = [storyboard instantiateViewControllerWithIdentifier:@"ModalNoti"];
+    modal.modalPresentationStyle = UIModalPresentationFormSheet;
+    modal.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    [rootNavViewController.topViewController presentViewController:modal animated:YES completion:^{
+        
+    }];
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    rootNavViewController = (UINavigationController*)[UIApplication sharedApplication].keyWindow.rootViewController;
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    LocalNotiVCViewController*modal = [storyboard instantiateViewControllerWithIdentifier:@"ModalNoti"];
+    modal.modalPresentationStyle = UIModalPresentationPopover;
+    modal.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    [rootNavViewController.visibleViewController presentViewController:modal animated:YES completion:^{
+        
+    }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
