@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RnZ-OO-fJq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RnZ-OO-fJq">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -366,46 +366,38 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4y9-V1-kXe">
-                                                    <rect key="frame" x="240" y="13" width="40" height="39"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWg-Zk-hgy">
+                                                    <rect key="frame" x="192" y="32" width="121" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="39" id="Zfm-ce-Pfj"/>
-                                                        <constraint firstAttribute="width" constant="40" id="onI-jQ-pvO"/>
+                                                        <constraint firstAttribute="width" constant="121" id="UvL-k7-H4P"/>
+                                                        <constraint firstAttribute="height" constant="30" id="aki-Se-UiE"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MZa-L4-FGA">
-                                                    <rect key="frame" x="288" y="21" width="24" height="24"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="24" id="Neq-CC-4dK"/>
-                                                        <constraint firstAttribute="width" constant="24" id="WE3-BL-flD"/>
-                                                    </constraints>
-                                                </imageView>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                    <state key="normal" title="Request for Claim">
+                                                        <color key="titleColor" red="0.4380232101" green="0.75401013959999996" blue="0.18638307770000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fWg-Zk-hgy" secondAttribute="trailing" constant="-1" id="4HN-iR-CMk"/>
                                                 <constraint firstItem="OsW-7o-nar" firstAttribute="top" secondItem="Tpd-aa-Req" secondAttribute="top" constant="14" id="5yp-dU-bVu"/>
                                                 <constraint firstItem="g1A-Zg-N6V" firstAttribute="top" secondItem="Tpd-aa-Req" secondAttribute="top" constant="5" id="7oP-cM-Ilq"/>
-                                                <constraint firstAttribute="trailing" secondItem="4y9-V1-kXe" secondAttribute="trailing" constant="40" id="9b7-eM-DO2"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="fWg-Zk-hgy" secondAttribute="bottom" constant="-4.5" id="Dr5-rl-WkN"/>
                                                 <constraint firstAttribute="bottom" secondItem="g1A-Zg-N6V" secondAttribute="bottom" constant="5" id="ISf-EZ-jxo"/>
                                                 <constraint firstItem="OsW-7o-nar" firstAttribute="leading" secondItem="g1A-Zg-N6V" secondAttribute="trailing" constant="7" id="KEr-X9-cwt"/>
                                                 <constraint firstItem="G5a-BZ-ert" firstAttribute="trailing" secondItem="OsW-7o-nar" secondAttribute="trailing" id="RpH-1i-RL2"/>
-                                                <constraint firstAttribute="centerY" secondItem="MZa-L4-FGA" secondAttribute="centerY" constant="-0.5" id="UrA-fz-chj"/>
                                                 <constraint firstAttribute="trailing" secondItem="OsW-7o-nar" secondAttribute="trailing" constant="76" id="Yhp-RZ-hK1"/>
-                                                <constraint firstAttribute="centerY" secondItem="4y9-V1-kXe" secondAttribute="centerY" id="Ymy-6R-RxS"/>
                                                 <constraint firstItem="G5a-BZ-ert" firstAttribute="top" secondItem="OsW-7o-nar" secondAttribute="bottom" constant="1" id="Z00-LW-Jaf"/>
                                                 <constraint firstItem="g1A-Zg-N6V" firstAttribute="leading" secondItem="Tpd-aa-Req" secondAttribute="leading" constant="10" id="ilm-kA-3pF"/>
-                                                <constraint firstAttribute="trailing" secondItem="MZa-L4-FGA" secondAttribute="trailing" constant="8" id="tS9-1c-9Re"/>
                                                 <constraint firstItem="G5a-BZ-ert" firstAttribute="leading" secondItem="OsW-7o-nar" secondAttribute="leading" id="wcW-Xf-mi6"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="rankingImageView" destination="MZa-L4-FGA" id="soE-2n-fGk"/>
+                                            <outlet property="btnClaim" destination="fWg-Zk-hgy" id="QTu-HP-PdH"/>
                                             <outlet property="terManagerImageView" destination="g1A-Zg-N6V" id="5f3-Ri-bMx"/>
                                             <outlet property="terManagerLoaclityLabel" destination="G5a-BZ-ert" id="Oy6-kU-O5P"/>
                                             <outlet property="terManagerNameLabel" destination="OsW-7o-nar" id="Blz-pw-CVB"/>
-                                            <outlet property="terManagerSalesCount" destination="4y9-V1-kXe" id="BEE-jI-IJe"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -414,6 +406,12 @@
                                     <outlet property="delegate" destination="QG5-CN-ZgU" id="EF0-Kc-kp5"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="JP Nagar list" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayW-oq-1ue">
+                                <rect key="frame" x="83" y="20" width="150" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.33017162570000003" green="0.33017162570000003" blue="0.33017162570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

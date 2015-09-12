@@ -56,9 +56,16 @@
     cell.terManagerSalesCount.hidden = YES;
     cell.rankingImageView.hidden = YES;
     [Utils cropViewCircle:cell.terManagerImageView];
+    
+    
+    [cell.btnClaim addTarget:self action:@selector(doctorAction:) forControlEvents:UIControlEventTouchUpInside];
+    cell.btnClaim.tag = indexPath.row;
+    
     return cell;
 }
-
+- (IBAction)doctorAction:(id)sender {
+    
+}
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 66;
