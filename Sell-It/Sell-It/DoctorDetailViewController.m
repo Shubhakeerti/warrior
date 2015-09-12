@@ -88,9 +88,9 @@
     if (cell == nil) {
         cell = [[TMCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"TMCell"];
     }
-    if(![cell.btnClaim.titleLabel.text isEqualToString:@"Doctor to complete"])
+    if(![target isEqualToString:@"Doctor to complete"])
     {
-        cell.btnClaim.titleLabel.text=nil;
+        [cell.btnClaim setTitle:@"" forState:UIControlStateNormal]; // To set the title
     }
     cell.terManagerNameLabel.text = [[self.terManagerArray objectAtIndex:indexPath.row] objectForKey:@"Name"];
     cell.terManagerLoaclityLabel.text = [[self.terManagerArray objectAtIndex:indexPath.row] objectForKey:@"loc"];
