@@ -34,6 +34,7 @@
     self.navigationItem.leftBarButtonItem=nil;
     self.navigationItem.hidesBackButton=YES;
     self.blurrView.hidden = YES;
+    self.rankingDict = [[NSMutableDictionary alloc] init];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -45,17 +46,11 @@
     self.navigationItem.hidesBackButton=YES;
     self.navigationItem.title = @"Leader Board";
     self.page = @"1";
-//    NSShadow* shadow = [NSShadow new];
-//    shadow.shadowOffset = CGSizeMake(0.0f, 1.0f);
-//    shadow.shadowColor = [UIColor redColor];
-//    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
-//                                                           [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0], NSForegroundColorAttributeName,
-//                                                           shadow, NSShadowAttributeName,
-//                                                           [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:21.0], NSFontAttributeName, nil]];
+
     UIFont *font = [UIFont fontWithName:@"HelveticaNeue-Light" size:10.0f];
 
     [HTTPConnectoin getSharedInstance].delegate = self;
-    self.rankingDict = [[NSMutableDictionary alloc] init];
+    
     [self.timeButton setTintColor:[UIColor colorWithRed:54.0/255.0 green:142.0/255.0 blue:244.0/255.0 alpha:1.0]];
     self.time = @"current_week";
     [self.timeButton setTitle:@"This Week" forState:UIControlStateNormal];
@@ -140,6 +135,9 @@
     [self.terManagerTableView reloadData];
     [self.blurrView setHidden:YES];
     self.isloadMore = NO;
+    [self.view setUserInteractionEnabled:YES];
+    [self.view.superview setUserInteractionEnabled:YES];
+    [[AppDelegate sharedAppdelegate].loginViewController.tabBarController.tabBar setUserInteractionEnabled:YES];
 }
 
 -(void)segmentChanged:(UISegmentedControl*)sender
@@ -148,6 +146,9 @@
 }
 -(void)doAPICall:(int)index
 {
+    [self.view setUserInteractionEnabled:NO];
+    [self.view.superview setUserInteractionEnabled:NO];
+    [[AppDelegate sharedAppdelegate].loginViewController.tabBarController.tabBar setUserInteractionEnabled:NO];
     self.blurrView.hidden = NO;
     NSString *serviceName;
     NSString *type;

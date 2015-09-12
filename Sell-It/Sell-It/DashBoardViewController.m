@@ -15,6 +15,7 @@
 #import "DatePickerTableViewCell.h"
 #import "AppDelegate.h"
 #import "DoctorDetailViewController.h"
+#import "Utils.h"
 
 #define blueColor [UIColor colorWithRed:54.0/255.0 green:142.0/255.0 blue:244.0/255.0 alpha:1]
 @interface DashBoardViewController ()
@@ -98,6 +99,8 @@
             searchCell.designationLabel.text = [NSString stringWithFormat:@"%@ - %@",selected[@"TSM"][@"Designation"],selected[@"TSM"][@"Area"]];
             searchCell.emailLabel.text = selected[@"TSM"][@"Email"];
             searchCell.phoneLabel.text = selected[@"TSM"][@"phone"];
+            searchCell.imageViewManager.image = [Utils settingImageForContactsWithName:@"Danish" withKey:@"Danish"];
+            [Utils cropViewCircle:searchCell.imageViewManager];
             return searchCell;
             
         }

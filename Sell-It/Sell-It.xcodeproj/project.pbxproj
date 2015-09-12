@@ -10,6 +10,12 @@
 		2211D6D91BA4094700F524A7 /* Mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 2211D6D71BA4094700F524A7 /* Mail.png */; };
 		2211D6DA1BA4094700F524A7 /* Password.png in Resources */ = {isa = PBXBuildFile; fileRef = 2211D6D81BA4094700F524A7 /* Password.png */; };
 		2211D6DC1BA40F9400F524A7 /* Login.png in Resources */ = {isa = PBXBuildFile; fileRef = 2211D6DB1BA40F9400F524A7 /* Login.png */; };
+		2211D6E01BA42C4700F524A7 /* Dashboard Copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 2211D6DE1BA42C4700F524A7 /* Dashboard Copy.png */; };
+		2211D6E11BA42C4700F524A7 /* Dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 2211D6DF1BA42C4700F524A7 /* Dashboard.png */; };
+		2211D6E41BA42C5800F524A7 /* Leaderboard Copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 2211D6E21BA42C5800F524A7 /* Leaderboard Copy.png */; };
+		2211D6E51BA42C5800F524A7 /* Leaderboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 2211D6E31BA42C5800F524A7 /* Leaderboard.png */; };
+		2211D6E81BA42C6B00F524A7 /* Maps Copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 2211D6E61BA42C6B00F524A7 /* Maps Copy.png */; };
+		2211D6E91BA42C6B00F524A7 /* Maps.png in Resources */ = {isa = PBXBuildFile; fileRef = 2211D6E71BA42C6B00F524A7 /* Maps.png */; };
 		22204D811BA3406C000D43D6 /* TMCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22204D801BA3406C000D43D6 /* TMCell.m */; };
 		22204D831BA3454F000D43D6 /* TMLeaderboard_json.txt in Resources */ = {isa = PBXBuildFile; fileRef = 22204D821BA3454F000D43D6 /* TMLeaderboard_json.txt */; };
 		22204D871BA365C5000D43D6 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 22204D861BA365C5000D43D6 /* Utils.m */; };
@@ -78,6 +84,12 @@
 		2211D6D71BA4094700F524A7 /* Mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mail.png; sourceTree = "<group>"; };
 		2211D6D81BA4094700F524A7 /* Password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Password.png; sourceTree = "<group>"; };
 		2211D6DB1BA40F9400F524A7 /* Login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Login.png; sourceTree = "<group>"; };
+		2211D6DE1BA42C4700F524A7 /* Dashboard Copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dashboard Copy.png"; sourceTree = "<group>"; };
+		2211D6DF1BA42C4700F524A7 /* Dashboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dashboard.png; sourceTree = "<group>"; };
+		2211D6E21BA42C5800F524A7 /* Leaderboard Copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Leaderboard Copy.png"; sourceTree = "<group>"; };
+		2211D6E31BA42C5800F524A7 /* Leaderboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Leaderboard.png; sourceTree = "<group>"; };
+		2211D6E61BA42C6B00F524A7 /* Maps Copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Maps Copy.png"; sourceTree = "<group>"; };
+		2211D6E71BA42C6B00F524A7 /* Maps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Maps.png; sourceTree = "<group>"; };
 		22204D7F1BA3406C000D43D6 /* TMCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMCell.h; sourceTree = "<group>"; };
 		22204D801BA3406C000D43D6 /* TMCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMCell.m; sourceTree = "<group>"; };
 		22204D821BA3454F000D43D6 /* TMLeaderboard_json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TMLeaderboard_json.txt; sourceTree = "<group>"; };
@@ -206,6 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				794152101BA412850012ED2E /* cross.png */,
+				2211D6DE1BA42C4700F524A7 /* Dashboard Copy.png */,
+				2211D6DF1BA42C4700F524A7 /* Dashboard.png */,
 				7941520E1BA3F4CF0012ED2E /* down.png */,
 				7941520A1BA3F4A80012ED2E /* blue.png */,
 				7941520B1BA3F4A80012ED2E /* yellow.png */,
@@ -213,6 +227,10 @@
 				794152071BA3F4850012ED2E /* red.png */,
 				792DB7211BA3738800A7E79E /* TM3.png */,
 				792DB71D1BA3715D00A7E79E /* TM1.png */,
+				2211D6E21BA42C5800F524A7 /* Leaderboard Copy.png */,
+				2211D6E31BA42C5800F524A7 /* Leaderboard.png */,
+				2211D6E61BA42C6B00F524A7 /* Maps Copy.png */,
+				2211D6E71BA42C6B00F524A7 /* Maps.png */,
 				22204D971BA3DA9D000D43D6 /* Up_Arrow_green.png */,
 				22204D951BA3DA8F000D43D6 /* Down_arrow_Red.png */,
 				22204D9A1BA40502000D43D6 /* Login_BackGround.png */,
@@ -445,6 +463,7 @@
 				22204D9C1BA40502000D43D6 /* Login_BackGround.png in Resources */,
 				222D29D31BA2ED0E00D59CB1 /* Main.storyboard in Resources */,
 				22204D961BA3DA8F000D43D6 /* Down_arrow_Red.png in Resources */,
+				2211D6E81BA42C6B00F524A7 /* Maps Copy.png in Resources */,
 				792DB7221BA3738800A7E79E /* TM3.png in Resources */,
 				222D29D81BA2ED0E00D59CB1 /* LaunchScreen.xib in Resources */,
 				792DB71E1BA3715D00A7E79E /* TM1.png in Resources */,
@@ -452,13 +471,18 @@
 				59E23E4A1BA43980001E8C07 /* TSM2_json.txt in Resources */,
 				59E23E3D1BA40D5F001E8C07 /* Artboard 39.png in Resources */,
 				7941520D1BA3F4A80012ED2E /* yellow.png in Resources */,
+				2211D6E11BA42C4700F524A7 /* Dashboard.png in Resources */,
+				2211D6E41BA42C5800F524A7 /* Leaderboard Copy.png in Resources */,
 				792DB7201BA3733A00A7E79E /* TM2.png in Resources */,
 				794152131BA413090012ED2E /* Doclist_json.txt in Resources */,
 				794152081BA3F4850012ED2E /* green.png in Resources */,
 				794152151BA417FD0012ED2E /* Doclist_json (1).txt in Resources */,
 				7941520F1BA3F4CF0012ED2E /* down.png in Resources */,
+				2211D6E91BA42C6B00F524A7 /* Maps.png in Resources */,
 				2211D6D91BA4094700F524A7 /* Mail.png in Resources */,
+				2211D6E01BA42C4700F524A7 /* Dashboard Copy.png in Resources */,
 				794152091BA3F4850012ED2E /* red.png in Resources */,
+				2211D6E51BA42C5800F524A7 /* Leaderboard.png in Resources */,
 				22204D9D1BA40502000D43D6 /* Logo.png in Resources */,
 				2211D6DC1BA40F9400F524A7 /* Login.png in Resources */,
 				2211D6DA1BA4094700F524A7 /* Password.png in Resources */,
