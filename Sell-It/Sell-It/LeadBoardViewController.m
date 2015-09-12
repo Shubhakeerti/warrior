@@ -45,15 +45,15 @@
     self.navigationItem.hidesBackButton=YES;
     self.navigationItem.title = @"Leader Board";
     self.page = @"1";
-    NSShadow* shadow = [NSShadow new];
-    shadow.shadowOffset = CGSizeMake(0.0f, 1.0f);
-    shadow.shadowColor = [UIColor redColor];
-    
-    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
-                                                           [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0], NSForegroundColorAttributeName,
-                                                           shadow, NSShadowAttributeName,
-                                                           [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:9.0], NSFontAttributeName, nil]];
+//    NSShadow* shadow = [NSShadow new];
+//    shadow.shadowOffset = CGSizeMake(0.0f, 1.0f);
+//    shadow.shadowColor = [UIColor redColor];
+//    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+//                                                           [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0], NSForegroundColorAttributeName,
+//                                                           shadow, NSShadowAttributeName,
+//                                                           [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:21.0], NSFontAttributeName, nil]];
     UIFont *font = [UIFont fontWithName:@"HelveticaNeue-Light" size:10.0f];
+
     [HTTPConnectoin getSharedInstance].delegate = self;
     self.rankingDict = [[NSMutableDictionary alloc] init];
     [self.timeButton setTintColor:[UIColor colorWithRed:54.0/255.0 green:142.0/255.0 blue:244.0/255.0 alpha:1.0]];
