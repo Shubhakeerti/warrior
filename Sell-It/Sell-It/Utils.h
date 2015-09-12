@@ -16,5 +16,5 @@
 +(UIColor *)colorWithHexString:(NSString *)hexString andAlpha:(float)alpha;
 +(UIColor *)colorWithHexValue:(uint)hexValue andAlpha:(float)alpha;
 +(void)cropViewCircle:(UIImageView *)view;
-
++(void)makeCircleWithColor:(UIColor*)color andPercent:(CGFloat)val lineWidth:(CGFloat)width mainText:(NSString*)mainText subText:(NSString*)subText font:(UIFont*)fontMain :(UIFont*)fontSub onView:(UIView*)view;
 @end
