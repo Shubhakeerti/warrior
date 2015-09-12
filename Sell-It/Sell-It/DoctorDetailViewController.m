@@ -57,14 +57,14 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     int temp=0;
     NSString *tag;
-    if([target isEqualToString:@"Docotor to completed"])
+    if([target isEqualToString:@"   Doctor to completed"])
     {
         tag=@"0";
     }
-    else if([target isEqualToString:@"Docotor to complete"])
+    else if([target isEqualToString:@"   Doctor to complete"])
     {
         tag=@"1";
-    }else if([target isEqualToString:@"Docotor to process"])
+    }else if([target isEqualToString:@"   Doctor in process"])
     {
         tag=@"2";
     }else
@@ -88,7 +88,7 @@
     if (cell == nil) {
         cell = [[TMCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"TMCell"];
     }
-    if(![target isEqualToString:@"Doctor to complete"])
+    if(![target isEqualToString:@"   Doctor to complete"])
     {
         [cell.btnClaim setTitle:@"" forState:UIControlStateNormal]; // To set the title
     }
