@@ -48,11 +48,5 @@
     "long": "77.576539",
     "loc" : "6th Phase",
     "flag" : "0"
-     },{
-    "Name": "Dr. Ravi N. Hiremagalore",
-    "lat": "12.910810, 77.591309",
-    "long": "77.591309",
-    "loc" : "3rd Phase",
-    "flag" : "0"
      }]
 }
