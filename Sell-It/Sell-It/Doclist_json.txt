@@ -1,0 +1,33 @@
+{
+  "TSM": [{
+    "Name": "Dr. Sajesh Tupai Kapadan",
+    "lat": "12.873619",
+    "long": "77.578372",
+    "loc" : "8th phase",
+    "flag" : "2"
+     },{
+    "Name": "Dr. Arun Kumar T",
+    "lat": "12.887871",
+    "long": "77.577662",
+    "loc" : "7th Phase",
+    "flag" : "1"
+     },{
+    "Name": "Dr. Sandeep Hegde",
+    "lat": "12.911036",
+    "long": "77.591309",
+    "loc" : "3rd phase",
+    "flag" : "2"
+     },{
+    "Name": "Dr. Sana Taher",
+    "lat": "12.908960",
+    "long": "77.579086",
+    "loc" : "1st Phase",
+    "flag" : "0"
+     },{
+    "Name": "Dr. Salil Choudhary",
+    "lat": "12.898264",
+    "long": "77.586679",
+    "loc" : "5th Phase",
+    "flag" : "1"
+     }]
+}
