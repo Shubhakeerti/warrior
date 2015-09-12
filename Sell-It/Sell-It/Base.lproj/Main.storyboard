@@ -1546,11 +1546,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Artboard 39.png" width="155" height="128"/>
         <image name="Login_BackGround.png" width="641" height="1136"/>
         <image name="Logo.png" width="278" height="335"/>
         <image name="Mail.png" width="29" height="28"/>
         <image name="Password.png" width="29" height="36"/>
-        <image name="Artboard 39.png" width="155" height="128"/>
         <image name="blue.png" width="27" height="28"/>
         <image name="cross.png" width="102" height="102"/>
         <image name="down.png" width="35" height="27"/>
