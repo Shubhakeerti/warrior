@@ -10,9 +10,13 @@
 
 @interface DoctorDetailViewController : UIViewController
 {
-    
+    NSString *target;
+    int iss;
 }
-
+-(void)initWithDoctorDetails:(NSString *)strTarget;
 - (IBAction)backAction:(id)sender;
+
+
+@property (weak, nonatomic) IBOutlet UIButton *btnStatus;
 
 @end
