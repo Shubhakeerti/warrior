@@ -6,7 +6,7 @@
 "Email" : "karanlakhwani@practo.com",
 "phone" : "7022790453",
 "Imageurl" : "" ,
-"C_month" : "September",
+"C_month" : "August",
 "C_year" : "2015",
 "Rev_target" : "8000",
 "Acc_Target" : "25",
