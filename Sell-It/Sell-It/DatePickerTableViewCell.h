@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DatePickerTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *btn;
 
 @end

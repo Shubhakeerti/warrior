@@ -47,6 +47,8 @@
 		59E23E381BA3F33B001E8C07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E23E371BA3F33B001E8C07 /* UIKit.framework */; };
 		59E23E3B1BA3FBB0001E8C07 /* LocalNotiVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E23E3A1BA3FBB0001E8C07 /* LocalNotiVCViewController.m */; };
 		59E23E3D1BA40D5F001E8C07 /* Artboard 39.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E23E3C1BA40D5F001E8C07 /* Artboard 39.png */; };
+		59E23E481BA43978001E8C07 /* TSM1_json.txt in Resources */ = {isa = PBXBuildFile; fileRef = 59E23E471BA43978001E8C07 /* TSM1_json.txt */; };
+		59E23E4A1BA43980001E8C07 /* TSM2_json.txt in Resources */ = {isa = PBXBuildFile; fileRef = 59E23E491BA43980001E8C07 /* TSM2_json.txt */; };
 		792DB71E1BA3715D00A7E79E /* TM1.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DB71D1BA3715D00A7E79E /* TM1.png */; };
 		792DB7201BA3733A00A7E79E /* TM2.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DB71F1BA3733A00A7E79E /* TM2.png */; };
 		792DB7221BA3738800A7E79E /* TM3.png in Resources */ = {isa = PBXBuildFile; fileRef = 792DB7211BA3738800A7E79E /* TM3.png */; };
@@ -141,6 +143,8 @@
 		59E23E391BA3FBB0001E8C07 /* LocalNotiVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalNotiVCViewController.h; sourceTree = "<group>"; };
 		59E23E3A1BA3FBB0001E8C07 /* LocalNotiVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalNotiVCViewController.m; sourceTree = "<group>"; };
 		59E23E3C1BA40D5F001E8C07 /* Artboard 39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Artboard 39.png"; sourceTree = "<group>"; };
+		59E23E471BA43978001E8C07 /* TSM1_json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TSM1_json.txt; sourceTree = "<group>"; };
+		59E23E491BA43980001E8C07 /* TSM2_json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TSM2_json.txt; sourceTree = "<group>"; };
 		792DB71D1BA3715D00A7E79E /* TM1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TM1.png; sourceTree = "<group>"; };
 		792DB71F1BA3733A00A7E79E /* TM2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TM2.png; sourceTree = "<group>"; };
 		792DB7211BA3738800A7E79E /* TM3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TM3.png; sourceTree = "<group>"; };
@@ -259,6 +263,8 @@
 				222D29F11BA2F12800D59CB1 /* DoctorDetailViewController.m */,
 				794152121BA413090012ED2E /* Doclist_json.txt */,
 				794152141BA417FD0012ED2E /* Doclist_json (1).txt */,
+				59E23E471BA43978001E8C07 /* TSM1_json.txt */,
+				59E23E491BA43980001E8C07 /* TSM2_json.txt */,
 				222D29F31BA2F13800D59CB1 /* TMDetailViewController.h */,
 				222D29F41BA2F13800D59CB1 /* TMDetailViewController.m */,
 				222D29F61BA2F14600D59CB1 /* SMDetailViewController.h */,
@@ -435,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				794152111BA412850012ED2E /* cross.png in Resources */,
+				59E23E481BA43978001E8C07 /* TSM1_json.txt in Resources */,
 				22204D9C1BA40502000D43D6 /* Login_BackGround.png in Resources */,
 				222D29D31BA2ED0E00D59CB1 /* Main.storyboard in Resources */,
 				22204D961BA3DA8F000D43D6 /* Down_arrow_Red.png in Resources */,
@@ -442,6 +449,7 @@
 				222D29D81BA2ED0E00D59CB1 /* LaunchScreen.xib in Resources */,
 				792DB71E1BA3715D00A7E79E /* TM1.png in Resources */,
 				222D29D51BA2ED0E00D59CB1 /* Images.xcassets in Resources */,
+				59E23E4A1BA43980001E8C07 /* TSM2_json.txt in Resources */,
 				59E23E3D1BA40D5F001E8C07 /* Artboard 39.png in Resources */,
 				7941520D1BA3F4A80012ED2E /* yellow.png in Resources */,
 				792DB7201BA3733A00A7E79E /* TM2.png in Resources */,

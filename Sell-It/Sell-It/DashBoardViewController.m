@@ -14,6 +14,7 @@
 #import "DataTableViewCell3.h"
 #import "DatePickerTableViewCell.h"
 #import "AppDelegate.h"
+#import "DoctorDetailViewController.h"
 
 #define blueColor [UIColor colorWithRed:54.0/255.0 green:142.0/255.0 blue:244.0/255.0 alpha:1]
 @interface DashBoardViewController ()
@@ -24,6 +25,9 @@
 {
     int selectedIndex;
     int previousIndex;
+    NSDictionary *json1;
+    NSDictionary *json2;
+    NSDictionary* selected;
 }
 
 - (void)viewDidLoad {
@@ -32,6 +36,13 @@
     selectedIndex = 0;
     previousIndex = 0;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(mainAction)];
+    NSString *filePath1 = [[NSBundle mainBundle] pathForResource:@"TSM1_json" ofType:@"txt"];
+    NSData *data1 = [NSData dataWithContentsOfFile:filePath1];
+    json1 = [NSJSONSerialization JSONObjectWithData:data1 options:kNilOptions error:nil];
+    NSString *filePath2 = [[NSBundle mainBundle] pathForResource:@"TSM2_json" ofType:@"txt"];
+    NSData *data2 = [NSData dataWithContentsOfFile:filePath2];
+    json2 = [NSJSONSerialization JSONObjectWithData:data2 options:kNilOptions error:nil];
+    selected = json1;
     // Do any additional setup after loading the view.
 }
 
@@ -83,10 +94,10 @@
             if (!searchCell) {
                 searchCell = (NameTableViewCell*)[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
             }
-            searchCell.nameLabel.text = @"Danish Jafri";
-            searchCell.designationLabel.text = @"sales Manager -bangalore";
-            searchCell.emailLabel.text = @"danishjafri88@gmail.com";
-            searchCell.phoneLabel.text = @"8105151960";
+            searchCell.nameLabel.text = selected[@"TSM"][@"Name"];
+            searchCell.designationLabel.text = [NSString stringWithFormat:@"%@ - %@",selected[@"TSM"][@"Designation"],selected[@"TSM"][@"Area"]];
+            searchCell.emailLabel.text = selected[@"TSM"][@"Email"];
+            searchCell.phoneLabel.text = selected[@"TSM"][@"phone"];
             return searchCell;
             
         }
@@ -166,6 +177,7 @@
             if (!searchCell) {
                 searchCell = (DatePickerTableViewCell*)[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
             }
+            searchCell.btn.text = [NSString stringWithFormat:@"%@ 2015",selected[@"TSM"][@"C_month"]];
             return searchCell;
         }
             break;
@@ -203,11 +215,11 @@
                     if (!searchCell) {
                         searchCell = (DataTableViewCell3*)[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
                     }
-                    [self makeCircleWithColor:[UIColor redColor] andPercent:0.36 lineWidth:4 mainText:@"3K" subText:@"Starter" font:[UIFont fontWithName:@"HelveticaNeue-Light" size:18] :[UIFont fontWithName:@"HelveticaNeue-Light" size:10] onView:searchCell.view1];
-                    [self makeCircleWithColor:blueColor andPercent:0.45 lineWidth:4 mainText:@"2k" subText:@"Pro" font:[UIFont fontWithName:@"HelveticaNeue-Light" size:18] :[UIFont fontWithName:@"HelveticaNeue-Light" size:10] onView:searchCell.view2];
-                    [self makeCircleWithColor:[UIColor greenColor] andPercent:0.66 lineWidth:4 mainText:@"1K" subText:@"Tab" font:[UIFont fontWithName:@"HelveticaNeue-Light" size:18] :[UIFont fontWithName:@"HelveticaNeue-Light" size:10] onView:searchCell.view3];
-                    [self makeCircleWithColor:[UIColor purpleColor] andPercent:0.85 lineWidth:4 mainText:@"1.5K" subText:@"EMR" font:[UIFont fontWithName:@"HelveticaNeue-Light" size:18] :[UIFont fontWithName:@"HelveticaNeue-Light" size:10] onView:searchCell.view4];
-                    [self makeCircleWithColor:[UIColor orangeColor] andPercent:0.75 lineWidth:5 mainText:@"36%" subText:@"Targets" font:[UIFont systemFontOfSize:28] :[UIFont systemFontOfSize:12] onView:searchCell.view5];
+                    [self makeCircleWithColor:[UIColor colorWithRed:188.0/255 green:99.0/255 blue:99.0/255 alpha:1] andPercent:1 lineWidth:4 mainText:@"3K" subText:@"Starter" font:[UIFont fontWithName:@"HelveticaNeue-Light" size:18] :[UIFont fontWithName:@"HelveticaNeue-Light" size:10] onView:searchCell.view1];
+                    [self makeCircleWithColor:blueColor andPercent:1 lineWidth:4 mainText:@"2k" subText:@"Pro" font:[UIFont fontWithName:@"HelveticaNeue-Light" size:18] :[UIFont fontWithName:@"HelveticaNeue-Light" size:10] onView:searchCell.view2];
+                    [self makeCircleWithColor:[UIColor colorWithRed:144.0/255 green:19.0/255 blue:254.0/255 alpha:1] andPercent:1 lineWidth:4 mainText:@"1K" subText:@"Tab" font:[UIFont fontWithName:@"HelveticaNeue-Light" size:18] :[UIFont fontWithName:@"HelveticaNeue-Light" size:10] onView:searchCell.view3];
+                    [self makeCircleWithColor:[UIColor purpleColor] andPercent:1 lineWidth:4 mainText:@"1.5K" subText:@"EMR" font:[UIFont fontWithName:@"HelveticaNeue-Light" size:18] :[UIFont fontWithName:@"HelveticaNeue-Light" size:10] onView:searchCell.view4];
+                    [self makeCircleWithColor:[UIColor orangeColor] andPercent:0.75 lineWidth:5 mainText:@"6.5k/10k" subText:@"Total" font:[UIFont systemFontOfSize:24] :[UIFont systemFontOfSize:12] onView:searchCell.view5];
                     searchCell.seperatorViewHeight.constant = 0.5;
                     return searchCell;
                 }
@@ -248,12 +260,12 @@
     switch (indexPath.row) {
         case 0:
         {
-            return 81;
+            return 94;
         }
             break;
         case 1:
         {
-            return 56;
+            return 70;
         }
             break;
         case 2:
@@ -263,6 +275,10 @@
             break;
         case 3:
         {
+            //177
+            if (selectedIndex==3) {
+                return 180;
+            }
             return 234;
         }
             break;
@@ -275,7 +291,23 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.row == 2) {
+        UIActionSheet* act = [[UIActionSheet alloc] initWithTitle:@"Select Month" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"September",@"August", nil];
+        [act showInView:self.view];
+    }
     
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        selected = json1;
+    }
+    if (buttonIndex == 1) {
+        selected = json2;
+    }
+    [self.tableView reloadData];
+    [actionSheet dismissWithClickedButtonIndex:0 animated:YES];
 }
 
 -(void)setBorderForView:(UIView*)view withColor:(UIColor*)color{
@@ -410,6 +442,14 @@
     
 }
 
+
+- (IBAction)doctorCompletedAction:(id)sender {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    DoctorDetailViewController *doctorDetailViewController = [storyboard instantiateViewControllerWithIdentifier:@"DoctorDetailViewController"];
+    [self.navigationController presentViewController:doctorDetailViewController animated:YES completion:nil];
+    
+}
 
 /*
 #pragma mark - Navigation

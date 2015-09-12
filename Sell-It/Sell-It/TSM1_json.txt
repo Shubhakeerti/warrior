@@ -1,0 +1,30 @@
+{
+  "TSM": {
+    "Name": "Karan D Lakhwani",
+    "Designation": "New York",
+    "Area": "JP Nagar",
+    "Email" : "karanlakhwani@practo.com",
+    "phone" : "7022790453",
+    "Imageurl" : "" ,
+    "C_month" : "September",
+    "C_year" : "2015",
+    "Rev_target" : "8000",
+    "Acc_Target" : "25",
+    "Rev_ach" : "2000",
+    "Acc_ach" : "6",
+    "sale" : {  "Starter" : { "count" : "2",
+                              "rev" : "500"
+                             },
+"Pro" : { "count" : "2",
+                              "rev" : "500"
+                             },
+"Tab" : { "count" : "1",
+                              "rev" : "500"
+                             },
+"EMR" : { "count" : "2",
+                              "rev" : "500"
+                             }
+
+              }
+  }
+}
